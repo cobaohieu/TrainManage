@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PendingCommit>
+  <CommitComment />
+  <TrackedFiles>
+    <RelativePath>TrainManageWeb\account.Master</RelativePath>
+    <RelativePath>TrainManageWeb\account.Master.cs</RelativePath>
+    <RelativePath>TrainManageWeb\account.Master.designer.cs</RelativePath>
+    <RelativePath>TrainManageWeb\giaovien.Master</RelativePath>
+    <RelativePath>TrainManageWeb\giaovien.Master.cs</RelativePath>
+    <RelativePath>TrainManageWeb\giaovien.Master.designer.cs</RelativePath>
+    <RelativePath>TrainmanageWeb\Properties\AssemblyInfo.cs</RelativePath>
+    <RelativePath>TrainManageWeb\quantri.Master</RelativePath>
+    <RelativePath>TrainManageWeb\quantri.Master.cs</RelativePath>
+    <RelativePath>TrainManageWeb\quantri.Master.designer.cs</RelativePath>
+    <RelativePath>TrainManageWeb\sinhvien.Master</RelativePath>
+    <RelativePath>TrainManageWeb\sinhvien.Master.cs</RelativePath>
+    <RelativePath>TrainManageWeb\sinhvien.Master.designer.cs</RelativePath>
+    <RelativePath>TrainManageWeb\Site.Master</RelativePath>
+    <RelativePath>TrainManageWeb\Site.Master.cs</RelativePath>
+    <RelativePath>TrainManageWeb\Site.Master.designer.cs</RelativePath>
+    <RelativePath>TrainManageWeb\taikhoan\login.aspx</RelativePath>
+    <RelativePath>TrainManageWeb\taikhoan\login.aspx.cs</RelativePath>
+    <RelativePath>TrainManageWeb\taikhoan\login.aspx.designer.cs</RelativePath>
+    <RelativePath>TrainManageWeb\taikhoan\signup.aspx</RelativePath>
+    <RelativePath>TrainManageWeb\taikhoan\signup.aspx.cs</RelativePath>
+    <RelativePath>TrainManageWeb\taikhoan\signup.aspx.designer.cs</RelativePath>
+    <RelativePath>TrainmanageWeb\TrainmanageWeb.csproj</RelativePath>
+    <RelativePath>TrainmanageWeb\Web.config</RelativePath>
+    <RelativePath>TrainmanageWeb\Web.Debug.config</RelativePath>
+    <RelativePath>TrainmanageWeb\Web.Release.config</RelativePath>
+  </TrackedFiles>
+  <ExcludedItems />
+  <WorkItems />
+</PendingCommit>
