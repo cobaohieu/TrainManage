@@ -1,0 +1,38 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+
+namespace TrainingManagement
+{
+    public partial class frmQuanTri : Form
+    {
+        public frmQuanTri()
+        {
+            InitializeComponent();
+        }
+
+        private void mônHọcToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmqlNguoiDungSV _frmqlNguoiDung = new frmqlNguoiDungSV();
+            _frmqlNguoiDung.ShowDialog();
+        }
+
+        private void mônHọcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmMain _frmMain = new frmMain();
+            _frmMain.ShowDialog();
+        }
+
+        private void thôngTinCáNhânToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmqlThongTinQuanTri _frmqlThongTinQuanTri = new frmqlThongTinQuanTri();
+            _frmqlThongTinQuanTri.ShowDialog();
+        }
+    }
+}

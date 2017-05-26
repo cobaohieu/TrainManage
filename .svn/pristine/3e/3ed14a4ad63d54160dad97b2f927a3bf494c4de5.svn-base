@@ -1,0 +1,56 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+
+namespace TrainingManagement
+{
+    public partial class frmGiaoVien : Form
+    {
+        public frmGiaoVien()
+        {
+            InitializeComponent();
+        }
+
+        private void ThoátToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmMain _frmMain = new frmMain();
+            _frmMain.ShowDialog();
+        }
+
+        private void thôngTinCáNhânToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmqlThongTinGiaoVien _frmqlThongTinGiaoVien = new frmqlThongTinGiaoVien();
+            _frmqlThongTinGiaoVien.ShowDialog();
+        }
+
+        private void mônHọcToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmqlkqMonHoc _frmqlkqMonHoc = new frmqlkqMonHoc();
+            _frmqlkqMonHoc.ShowDialog();
+        }
+
+        private void chiTiếtMônHọcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmqltkdsMonHocgv _frmqltkdsMonHocgv = new frmqltkdsMonHocgv();
+            _frmqltkdsMonHocgv.ShowDialog();
+        }
+
+        private void danhSáchCácChươngTrìnhĐàoTạoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmqltkdsChuongTrinhgv _frmqltkdsChuongTrinhgv = new frmqltkdsChuongTrinhgv();
+            _frmqltkdsChuongTrinhgv.ShowDialog();
+        }
+
+        private void kếtQuảCácMônHọcCủaSinhViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmqltkKetQuagv _frmqltkKetQuagv = new frmqltkKetQuagv();
+            _frmqltkKetQuagv.ShowDialog();
+        }
+    }
+}

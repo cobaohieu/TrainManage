@@ -1,0 +1,73 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+
+namespace TrainingManagement
+{
+    public partial class frmQuanLy : Form
+    {
+        public frmQuanLy()
+        {
+            InitializeComponent();
+        }
+
+        private void danhSáchSinhViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void thôngTinCáNhânToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmqlThongTinQuanLy _frmqlThongTinQuanLy = new frmqlThongTinQuanLy();
+            _frmqlThongTinQuanLy.ShowDialog();
+        }
+
+        private void chươngTrìnhĐàoTạoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmqlChuongTrinh _frmqlChuongTrinh = new frmqlChuongTrinh();
+            _frmqlChuongTrinh.ShowDialog();
+        }
+
+        private void mônHọcToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            frmMain _frmMain = new frmMain();
+            _frmMain.ShowDialog();
+        }
+
+        private void thoátToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmMain _frmMain = new frmMain();
+            _frmMain.ShowDialog();
+        }
+
+        private void trạngTháiCủaSinhViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmqlTrangThai _frmqlTrangThai = new frmqlTrangThai();
+            _frmqlTrangThai.ShowDialog();
+        }
+
+        private void danhSáchCácChươngTrìnhĐàoTạoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmqltkdsChuongTrinhql _frmqltkdsChuongTrinhql = new frmqltkdsChuongTrinhql();
+            _frmqltkdsChuongTrinhql.ShowDialog();
+        }
+
+        private void danhSáchCácMônHọcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmqltkdsMonHocql _frmqltkdsMonHocql = new frmqltkdsMonHocql();
+            _frmqltkdsMonHocql.ShowDialog();
+        }
+
+        private void kếtQuảCácMônHọcCủaSinhViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmqltkKetQuaql _frmqltkKetQuaql = new frmqltkKetQuaql();
+            _frmqltkKetQuaql.ShowDialog();
+        }
+    }
+}

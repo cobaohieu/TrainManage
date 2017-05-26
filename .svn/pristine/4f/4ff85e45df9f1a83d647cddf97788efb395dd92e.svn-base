@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{11C1913C-35F5-4A34-ACAB-B63D91239EF8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TrainingManagement</RootNamespace>
+    <AssemblyName>TrainingManagement</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmGiaoVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGiaoVien.Designer.cs">
+      <DependentUpon>frmGiaoVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmqlChuongTrinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmqlChuongTrinh.Designer.cs">
+      <DependentUpon>frmqlChuongTrinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmqlkqMonHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmqlkqMonHoc.Designer.cs">
+      <DependentUpon>frmqlkqMonHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmqlNguoiDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmqlNguoiDung.Designer.cs">
+      <DependentUpon>frmqlNguoiDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmqlThongTinGiaoVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmqlThongTinGiaoVien.Designer.cs">
+      <DependentUpon>frmqlThongTinGiaoVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmqlThongTinQuanLy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmqlThongTinQuanLy.Designer.cs">
+      <DependentUpon>frmqlThongTinQuanLy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmqlThongTinQuanTri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmqlThongTinQuanTri.Designer.cs">
+      <DependentUpon>frmqlThongTinQuanTri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmqltkdsChuongTrinhgv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmqltkdsChuongTrinhgv.Designer.cs">
+      <DependentUpon>frmqltkdsChuongTrinhgv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmqltkdsChuongTrinhql.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmqltkdsChuongTrinhql.Designer.cs">
+      <DependentUpon>frmqltkdsChuongTrinhql.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmqltkdsMonHocgv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmqltkdsMonHocgv.Designer.cs">
+      <DependentUpon>frmqltkdsMonHocgv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmqltkdsMonHocql.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmqltkdsMonHocql.Designer.cs">
+      <DependentUpon>frmqltkdsMonHocql.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmqltkKetQuagv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmqltkKetQuagv.Designer.cs">
+      <DependentUpon>frmqltkKetQuagv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmqltkKetQuaql.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmqltkKetQuaql.Designer.cs">
+      <DependentUpon>frmqltkKetQuaql.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmqlTrangThai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmqlTrangThai.Designer.cs">
+      <DependentUpon>frmqlTrangThai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuanLy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuanLy.Designer.cs">
+      <DependentUpon>frmQuanLy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuanTri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuanTri.Designer.cs">
+      <DependentUpon>frmQuanTri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmGiaoVien.resx">
+      <DependentUpon>frmGiaoVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmqlChuongTrinh.resx">
+      <DependentUpon>frmqlChuongTrinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmqlkqMonHoc.resx">
+      <DependentUpon>frmqlkqMonHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmqlNguoiDung.resx">
+      <DependentUpon>frmqlNguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmqlThongTinGiaoVien.resx">
+      <DependentUpon>frmqlThongTinGiaoVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmqlThongTinQuanLy.resx">
+      <DependentUpon>frmqlThongTinQuanLy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmqlThongTinQuanTri.resx">
+      <DependentUpon>frmqlThongTinQuanTri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmqltkdsChuongTrinhgv.resx">
+      <DependentUpon>frmqltkdsChuongTrinhgv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmqltkdsChuongTrinhql.resx">
+      <DependentUpon>frmqltkdsChuongTrinhql.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmqltkdsMonHocgv.resx">
+      <DependentUpon>frmqltkdsMonHocgv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmqltkdsMonHocql.resx">
+      <DependentUpon>frmqltkdsMonHocql.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmqltkKetQuagv.resx">
+      <DependentUpon>frmqltkKetQuagv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmqltkKetQuaql.resx">
+      <DependentUpon>frmqltkKetQuaql.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmqlTrangThai.resx">
+      <DependentUpon>frmqlTrangThai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuanLy.resx">
+      <DependentUpon>frmQuanLy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuanTri.resx">
+      <DependentUpon>frmQuanTri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="rptbangtotnghiep.rdlc" />
+    <EmbeddedResource Include="rptctmonhoc.rdlc" />
+    <EmbeddedResource Include="rptdssvmonhoc.rdlc" />
+    <EmbeddedResource Include="rptkqsvmonhoc.rdlc" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Images\logo_ctu.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

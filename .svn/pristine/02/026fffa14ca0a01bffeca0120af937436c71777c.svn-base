@@ -1,0 +1,132 @@
+﻿namespace TrainingManagement
+{
+    partial class frmQuanTri
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.txtGioiThieu = new System.Windows.Forms.TextBox();
+            this.mstquantri = new System.Windows.Forms.MenuStrip();
+            this.quảnLýToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.thôngTinCáNhânToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mônHọcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mônHọcToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.mstquantri.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // txtGioiThieu
+            // 
+            this.txtGioiThieu.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.txtGioiThieu.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtGioiThieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGioiThieu.ForeColor = System.Drawing.Color.White;
+            this.txtGioiThieu.Location = new System.Drawing.Point(-8, 398);
+            this.txtGioiThieu.Multiline = true;
+            this.txtGioiThieu.Name = "txtGioiThieu";
+            this.txtGioiThieu.Size = new System.Drawing.Size(769, 20);
+            this.txtGioiThieu.TabIndex = 5;
+            this.txtGioiThieu.Text = "     Khoa công nghệ thông tin và truyền thông                                    " +
+    "                                                                           Giảng" +
+    " viên: Trần Văn Hoàng";
+            // 
+            // mstquantri
+            // 
+            this.mstquantri.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.quảnLýToolStripMenuItem,
+            this.thoátToolStripMenuItem});
+            this.mstquantri.Location = new System.Drawing.Point(0, 0);
+            this.mstquantri.Name = "mstquantri";
+            this.mstquantri.Size = new System.Drawing.Size(756, 24);
+            this.mstquantri.TabIndex = 9;
+            this.mstquantri.Text = "mstquantri";
+            // 
+            // quảnLýToolStripMenuItem
+            // 
+            this.quảnLýToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.thôngTinCáNhânToolStripMenuItem,
+            this.mônHọcToolStripMenuItem});
+            this.quảnLýToolStripMenuItem.Name = "quảnLýToolStripMenuItem";
+            this.quảnLýToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
+            this.quảnLýToolStripMenuItem.Text = "Tài khoản";
+            // 
+            // thôngTinCáNhânToolStripMenuItem
+            // 
+            this.thôngTinCáNhânToolStripMenuItem.Name = "thôngTinCáNhânToolStripMenuItem";
+            this.thôngTinCáNhânToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.thôngTinCáNhânToolStripMenuItem.Text = "Thông tin cá nhân";
+            this.thôngTinCáNhânToolStripMenuItem.Click += new System.EventHandler(this.thôngTinCáNhânToolStripMenuItem_Click);
+            // 
+            // mônHọcToolStripMenuItem
+            // 
+            this.mônHọcToolStripMenuItem.Name = "mônHọcToolStripMenuItem";
+            this.mônHọcToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.mônHọcToolStripMenuItem.Text = "Thoát";
+            this.mônHọcToolStripMenuItem.Click += new System.EventHandler(this.mônHọcToolStripMenuItem_Click);
+            // 
+            // thoátToolStripMenuItem
+            // 
+            this.thoátToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mônHọcToolStripMenuItem1});
+            this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
+            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.thoátToolStripMenuItem.Text = "Quản lý";
+            // 
+            // mônHọcToolStripMenuItem1
+            // 
+            this.mônHọcToolStripMenuItem1.Name = "mônHọcToolStripMenuItem1";
+            this.mônHọcToolStripMenuItem1.Size = new System.Drawing.Size(138, 22);
+            this.mônHọcToolStripMenuItem1.Text = "Người dùng";
+            this.mônHọcToolStripMenuItem1.Click += new System.EventHandler(this.mônHọcToolStripMenuItem1_Click);
+            // 
+            // frmQuanTri
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(756, 418);
+            this.Controls.Add(this.mstquantri);
+            this.Controls.Add(this.txtGioiThieu);
+            this.MaximizeBox = false;
+            this.Name = "frmQuanTri";
+            this.Text = "Phần quản lý dành cho Quản trị hệ thống";
+            this.mstquantri.ResumeLayout(false);
+            this.mstquantri.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.TextBox txtGioiThieu;
+        private System.Windows.Forms.MenuStrip mstquantri;
+        private System.Windows.Forms.ToolStripMenuItem quảnLýToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem thôngTinCáNhânToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mônHọcToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem thoátToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mônHọcToolStripMenuItem1;
+    }
+}
