@@ -70,5 +70,28 @@ namespace TrainingManagement
         {
             this.txtUser.Focus();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Controls.Clear();
+            foreach (Control c in this.Controls)
+            {
+                this.Controls.Add(c);
+            }
+            frmGiaoVien _frmGiaoVien = new frmGiaoVien();
+            _frmGiaoVien.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            frmQuanLy _frmQuanLy = new frmQuanLy();
+            _frmQuanLy.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            frmQuanLy _frmQuanLy = new frmQuanLy();
+            _frmQuanLy.ShowDialog();
+        }
     }
 }

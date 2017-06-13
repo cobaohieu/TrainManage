@@ -1,16 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26430.6
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainingManagement", "TrainingManagement\TrainingManagement.csproj", "{11C1913C-35F5-4A34-ACAB-B63D91239EF8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainManageWeb", "TrainManageWeb\TrainManageWeb.csproj", "{A9D11CF6-5273-4123-A419-CEADB0018F07}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "App_Code", "App_Code", "{D9561286-71DD-482D-A591-7F00DE3E0938}"
-	ProjectSection(SolutionItems) = preProject
-		..\..\Downloads\trainmanage.sql = ..\..\Downloads\trainmanage.sql
-	EndProjectSection
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "traimanageSetup", "traimanageSetup\traimanageSetup.vdproj", "{09A6AE2C-8EA2-4FED-A69C-B68F1E34AC8B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,6 +39,12 @@ Global
 		{A9D11CF6-5273-4123-A419-CEADB0018F07}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{A9D11CF6-5273-4123-A419-CEADB0018F07}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{A9D11CF6-5273-4123-A419-CEADB0018F07}.Release|x86.ActiveCfg = Release|Any CPU
+		{09A6AE2C-8EA2-4FED-A69C-B68F1E34AC8B}.Debug|Any CPU.ActiveCfg = Debug
+		{09A6AE2C-8EA2-4FED-A69C-B68F1E34AC8B}.Debug|Mixed Platforms.ActiveCfg = Debug
+		{09A6AE2C-8EA2-4FED-A69C-B68F1E34AC8B}.Debug|x86.ActiveCfg = Debug
+		{09A6AE2C-8EA2-4FED-A69C-B68F1E34AC8B}.Release|Any CPU.ActiveCfg = Release
+		{09A6AE2C-8EA2-4FED-A69C-B68F1E34AC8B}.Release|Mixed Platforms.ActiveCfg = Release
+		{09A6AE2C-8EA2-4FED-A69C-B68F1E34AC8B}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

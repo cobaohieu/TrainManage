@@ -30,7 +30,7 @@ namespace TrainingManagement
                 {
                     Dispose(true);
                     this.Hide();
-                    frmMain _frmMain = new frmMain();
+                    frmLogin _frmMain = new frmLogin();
                     _frmMain.ShowDialog();
                 }
                 return true;
@@ -44,7 +44,7 @@ namespace TrainingManagement
             {
                 Dispose(true);
                 this.Hide();
-                frmMain _frmMain = new frmMain();
+                frmLogin _frmMain = new frmLogin();
                 _frmMain.ShowDialog();
             }
             else
@@ -118,7 +118,7 @@ namespace TrainingManagement
             {
                 Dispose(true);
                 this.Hide();
-                frmMain _frmMain = new frmMain();
+                frmLogin _frmMain = new frmLogin();
                 _frmMain.ShowDialog();
             }
         }

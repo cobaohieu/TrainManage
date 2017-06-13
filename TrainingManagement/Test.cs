@@ -1,0 +1,35 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using TrainingManagement.GUI;
+
+namespace TrainingManagement
+{
+    public partial class frmTest : Form
+    {
+        public frmTest()
+        {
+            InitializeComponent();
+        }
+
+        private void thôngTinCáNhânToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pnQLThongTinGiaoVien.Visible = true;
+        }
+
+        private void frmTest_Load(object sender, EventArgs e)
+        {
+            pnQLThongTinGiaoVien.Visible = false;
+        }
+        //uc.ButtonClick += new EventHandler(pnQLThongTinGiaoVien_Paint);
+        private void pnQLThongTinGiaoVien_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
+    }
+}

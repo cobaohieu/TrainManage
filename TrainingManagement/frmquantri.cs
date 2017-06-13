@@ -72,7 +72,7 @@ namespace TrainingManagement
             if (MessageBox.Show("Bạn có muốn thoát hay không?", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Hide();
-                frmMain _frmMain = new frmMain();
+                frmLogin _frmMain = new frmLogin();
                 _frmMain.ShowDialog();
             }
         }
