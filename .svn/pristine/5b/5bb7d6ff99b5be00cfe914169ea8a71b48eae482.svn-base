@@ -1,0 +1,32 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace TrainingManagement.Entities
+{
+    class tblHocKy
+    {
+        int _id;
+
+        public int Id
+        {
+            get { return _id; }
+            set { _id = value; }
+        }
+        string _mahocky;
+
+        public string Mahocky
+        {
+            get { return _mahocky; }
+            set { _mahocky = value; }
+        }
+        string _tenhocky;
+
+        public string Tenhocky
+        {
+            get { return _tenhocky; }
+            set { _tenhocky = value; }
+        }
+    }
+}

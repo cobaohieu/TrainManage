@@ -1,0 +1,157 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TrainingManagement.DAL
+{
+    class SinhVienDAL
+    {
+        DataServices ds;
+        SqlConnection con;
+        SqlCommand cmd;
+        SqlDataAdapter da;
+        DataTable dt;
+        public SinhVienDAL()
+        {
+            ds = new DataServices();
+        }
+        public DataTable getAllSinhVien()
+        {
+            string sql = "sp_tblSinhVien_SelectAll";
+            try
+            {
+                con = ds.getConnect();
+                da = new SqlDataAdapter(sql, con);
+                con.Open();
+                dt = new DataTable();
+                da.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                da.Dispose();
+                con.Close();
+            }
+            return dt;
+        }
+        public DataTable getAllSinhVien(int id)
+        {
+            string sql = "sp_tblSinhVien_SelectID";
+            try
+            {
+                con = ds.getConnect();
+                da = new SqlDataAdapter(sql, con);
+                con.Open();
+                dt = new DataTable();
+                da.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                da.Dispose();
+                con.Close();
+            }
+            return dt;
+        }
+        public bool insertSinhVien(Entities.tblSinhVien sv)
+        {
+            bool check = false;
+            string sql = "sp_tblSinhVien_Insert";
+            try
+            {
+                con = ds.getConnect();
+                cmd = new SqlCommand(sql, con);
+                con.Open();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@idlop", SqlDbType.Int).Value = sv.Idlop;
+                cmd.Parameters.Add("@idtrangthai", SqlDbType.Int).Value = sv.Idtrangthai;
+                cmd.Parameters.Add("@masinhvien", SqlDbType.NVarChar).Value = sv.Masinhvien;
+                cmd.Parameters.Add("@tensinhvien", SqlDbType.NVarChar).Value = sv.Tensinhvien;
+                cmd.Parameters.Add("@namsinh", SqlDbType.Date).Value = sv.Namsinh;
+                cmd.Parameters.Add("@gioitinh", SqlDbType.NVarChar).Value = sv.Gioitinh;
+                cmd.Parameters.Add("@noisinh", SqlDbType.NVarChar).Value = sv.Noisinh;
+                cmd.Parameters.Add("@diachi", SqlDbType.NVarChar).Value = sv.Diachi;
+                cmd.ExecuteNonQuery();
+                check = true;
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                cmd.Dispose();
+                con.Close();
+            }
+            return check;
+        }
+        public bool updateSinhVien(Entities.tblSinhVien sv)
+        {
+            bool check = false;
+            string sql = "sp_tblSinhVien_Update";
+            try
+            {
+                con = ds.getConnect();
+                cmd = new SqlCommand(sql, con);
+                con.Open();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@id", SqlDbType.Int).Value = sv.Id;
+                cmd.Parameters.Add("@idlop", SqlDbType.Int).Value = sv.Idlop;
+                cmd.Parameters.Add("@idtrangthai", SqlDbType.Int).Value = sv.Idtrangthai;
+                cmd.Parameters.Add("@masinhvien", SqlDbType.NVarChar).Value = sv.Masinhvien;
+                cmd.Parameters.Add("@tensinhvien", SqlDbType.NVarChar).Value = sv.Tensinhvien;
+                cmd.Parameters.Add("@namsinh", SqlDbType.Date).Value = sv.Namsinh;
+                cmd.Parameters.Add("@gioitinh", SqlDbType.NVarChar).Value = sv.Gioitinh;
+                cmd.Parameters.Add("@noisinh", SqlDbType.NVarChar).Value = sv.Noisinh;
+                cmd.Parameters.Add("@diachi", SqlDbType.NVarChar).Value = sv.Diachi;
+                cmd.ExecuteNonQuery();
+                check = true;
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                cmd.Dispose();
+                con.Close();
+            }
+            return check;
+        }
+        public bool deleteSinhVien(Entities.tblSinhVien sv)
+        {
+            bool check = false;
+            string sql = "sp_tblSinhVien_Delete";
+            try
+            {
+                con = ds.getConnect();
+                cmd = new SqlCommand(sql, con);
+                con.Open();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@id", SqlDbType.Int).Value = sv.Id;
+                cmd.ExecuteNonQuery();
+                check = true;
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                cmd.Dispose();
+                con.Close();
+            }
+            return check;
+        }
+    }
+}

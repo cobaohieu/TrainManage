@@ -1,0 +1,39 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TrainingManagement.BLL
+{
+    class ThongTinBLL
+    {
+        DAL.ThongTinDAL dal;
+        public ThongTinBLL()
+        {
+            dal = new DAL.ThongTinDAL();
+        }
+        public DataTable getAllThongTin()
+        {
+            return dal.getAllThongTin();
+        }
+        public DataTable getAllThongTin(int id)
+        {
+            return dal.getAllThongTin(id);
+        }
+        public bool insertThongTin(Entities.tblThongTin tt
+        {
+            return dal.insertThongTin(tt;
+        }
+        public bool updateThongTin(Entities.tblThongTin tt
+        {
+            return dal.updateThongTin(tt;
+        }
+        public bool deleteThongTin(Entities.tblThongTin tt
+        {
+            return dal.deleteThongTin(tt;
+        }
+    }
+}
