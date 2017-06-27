@@ -1,0 +1,744 @@
+use trainmanage
+-- 1 Khoa
+--
+create procedure sp_tblKhoa_SelectAll
+as
+begin
+	select tk.makhoa, tk.tenkhoa, tk.sodienthoai from tblKhoa as tk
+end
+--
+create procedure sp_tblKhoa_Insert
+@makhoa varchar(50),
+@tenkhoa nvarchar(100),
+@sodienthoai varchar(11)
+as
+begin
+	insert into tblKhoa
+	(
+		makhoa,
+		tenkhoa,
+		sodienthoai
+	)
+	values
+	(
+		@makhoa,
+		@tenkhoa,
+		@sodienthoai
+	)
+end
+--
+create procedure sp_tblKhoa_Update
+@id int,
+@makhoa varchar(50),
+@tenkhoa nvarchar(100),
+@sodienthoai varchar(11)
+as
+begin
+	update tblKhoa
+	set 
+		makhoa = @makhoa,
+		tenkhoa = @tenkhoa,
+		sodienthoai = @sodienthoai
+	where id = @id
+end
+
+create procedure sp_tblKhoa_Delete
+@id int
+as
+begin
+	delete from tblKhoa
+	where id = @id
+end
+--
+--2 Chuc Vu
+--
+create procedure sp_tblChucvu_SelectAll
+as
+begin
+	select tcv.machucvu, tcv.tenchucvu from tblChucVu as tcv
+end
+--
+create procedure sp_tblChucVu_Insert
+@machucvu varchar(50),
+@tenchucvu nvarchar(100)
+as
+begin
+	insert into tblChucVu
+	(
+		machucvu,
+		tenchucvu
+	)
+	values
+	(
+		@machucvu,
+		@tenchucvu
+	)
+end
+--
+create procedure sp_tblChucVu_Update
+@id int,
+@machucvu varchar(50),
+@tenchucvu nvarchar(100)
+as
+begin
+	update tblChucVu
+	set 
+		machucvu = @machucvu,
+		tenchucvu = @tenchucvu
+	where id = @id
+end
+--
+create procedure sp_tblChucVu_Delete
+@id int
+as
+begin
+	delete from tblChucVu
+	where id = @id
+end
+--
+--3 nien khoa
+--
+create procedure sp_tblNienKhoa_SelectAll
+as
+begin
+	select tnk.manienkhoa, tnk.tennienkhoa, tnk.nambatdau, tnk.namketthuc from tblNienKhoa as tnk
+end
+--
+create procedure sp_tblNienKhoa_Insert
+@manienkhoa varchar(50),
+@tennienkhoa nvarchar(100),
+@nambatdau date,
+@namketthuc date
+as
+begin
+	insert into tblNienKhoa
+	(
+		manienkhoa,
+		tennienkhoa,
+		nambatdau,
+		namketthuc
+	)
+	values
+	(
+		@manienkhoa,
+		@tennienkhoa,
+		@nambatdau,
+		@namketthuc
+	)
+end
+--
+create procedure sp_tblNienKhoa_Update
+@id int,
+@manienkhoa varchar(50),
+@tennienkhoa nvarchar(100),
+@nambatdau date,
+@namketthuc date
+as
+begin
+	update tblNienKhoa
+	set
+		manienkhoa = @manienkhoa,
+		tennienkhoa = @tennienkhoa,
+		nambatdau = @nambatdau,
+		namketthuc = @namketthuc
+	where id = @id
+end
+--
+create procedure sp_tblNienKhoa_Delete
+@id int
+as
+begin
+	delete from tblNienKhoa
+	where id = @id
+end
+--
+--4 tin chi
+--
+create procedure sp_tblTinChi_SelectAll
+as
+begin
+	select ttc.matinchi, ttc.sotinchi from tblTinChi as ttc
+end
+--
+create procedure sp_tblTinChi_Insert
+@matinchi varchar(50),
+@sotinchi varchar(2)
+as
+begin
+	insert into tblTinChi
+	(
+		matinchi,
+		sotinchi
+	)
+	values
+	(
+		@matinchi,
+		@sotinchi
+	)
+end
+--
+create procedure sp_tblTinChi_Update
+@id int,
+@matinchi varchar(50),
+@sotinchi varchar(2)
+as
+begin
+	update tblTinChi
+	set
+		matinchi = @matinchi,
+		sotinchi = @sotinchi
+	where id = @id
+end
+--
+create procedure sp_tblTinChi_Delete
+@id int
+as
+begin
+	delete from tblTinChi
+	where id = @id
+end
+--
+--5 hoc ky
+--
+create procedure sp_tblHocKy_SelectAll
+as
+begin
+	select thk.mahocky, thk.tenhocky from tblHocKy as thk
+end
+--
+create procedure sp_tblHocKy_Insert
+@mahocky varchar(50),
+@tenhocky nvarchar(100)
+as
+begin
+	insert into tblHocKy
+	(
+		mahocky,
+		tenhocky
+	)
+	values
+	(
+		@mahocky,
+		@tenhocky
+	)
+end
+--
+create procedure sp_tblHocKy_Update
+@id int,
+@mahocky varchar(50),
+@tenhocky nvarchar(100)
+as
+begin
+	update tblHocKy
+	set
+		mahocky = @mahocky,
+		tenhocky = @tenhocky
+	where id = @id
+end
+---
+create procedure sp_tblHocKy_Delete
+@id int
+as
+begin
+	delete from tblHocKy
+	where id = @id
+end
+--
+--6 chuong trinh dao tao
+--
+create procedure sp_tblChuongTrinhDaoTao_SelectAll
+as
+begin
+	select tctdt.machuongtrinh, tctdt.tenchuongtrinh from tblChuongTrinhDaoTao as tctdt
+end
+--
+create procedure sp_tblChuongTrinhDaoTao_Insert
+@machuongtrinh varchar(50),
+@tenchuongtrinh nvarchar(100)
+as
+begin
+	insert into tblChuongTrinhDaoTao
+	(
+		machuongtrinh,
+		tenchuongtrinh
+	)
+	values
+	(
+		@machuongtrinh,
+		@tenchuongtrinh
+	)
+end
+--
+create procedure sp_tblChuongTrinhDaoTao_Update
+@id int,
+@machuongtrinh varchar(50),
+@tenchuongtrinh nvarchar(100)
+as
+begin
+	update tblChuongTrinhDaoTao
+	set
+		machuongtrinh = @machuongtrinh,
+		tenchuongtrinh = @tenchuongtrinh
+	where id = @id
+end
+--
+create procedure sp_tblChuongTrinhDaoTao_Delete
+@id int
+as
+begin
+	delete from tblChuongTrinhDaoTao
+	where id = @id
+end
+--
+--7 Trang Thai
+--
+create procedure sp_tblTrangThai_SelectAll
+as
+begin
+	select ttt.matrangthai, ttt.tentrangthai from tblTrangThai as ttt
+end
+--
+create procedure sp_tblTrangThai_Insert
+@matrangthai varchar(50),
+@tentrangthai nvarchar(100)
+as
+begin
+	insert into tblTrangThai
+	(
+		matrangthai,
+		tentrangthai
+	)
+	values
+	(
+		@matrangthai,
+		@tentrangthai
+	)
+end
+--
+create procedure sp_tblTrangThai_Update
+@id int,
+@matrangthai varchar(50),
+@tentrangthai nvarchar(100)
+as
+begin
+	update tblTrangThai
+	set
+		matrangthai = @matrangthai,
+		tentrangthai = @tentrangthai
+	where id = @id
+end
+--
+create procedure sp_tblTrangThai_Delete
+@id int
+as
+begin
+	delete from tblTrangThai
+	where id = @id
+end
+--
+--8 Lop
+--
+create procedure sp_tblLop_SelectAll
+as
+begin
+	select tl.malop, tl.idkhoa, tl.idnienkhoa, tl.tenlop, tl.siso from tblLop as tl
+end
+--
+create procedure sp_tblLop_SelectID
+@id int
+as
+begin
+	select tl.idkhoa, tl.idnienkhoa, tl.malop, tl.tenlop, tl.siso from tblLop as tl
+	where id = @id
+end
+--
+create procedure sp_tblLop_Insert
+@idkhoa int,
+@idnienkhoa int,
+@malop varchar(50),
+@tenlop nvarchar(100),
+@siso int
+as
+begin
+	insert into tblLop
+	(
+		idkhoa,
+		idnienkhoa,
+		malop,
+		tenlop,
+		siso
+	)
+	values
+	(
+		@idkhoa,
+		@idnienkhoa,
+		@malop,
+		@tenlop,
+		@siso
+	)
+end
+--
+create procedure sp_tblLop_Update
+@id int,
+@idkhoa int,
+@idnienkhoa int,
+@malop varchar(50),
+@tenlop nvarchar(100),
+@siso int
+as
+begin
+	update tblLop
+	set
+		idkhoa = @idkhoa,
+		idnienkhoa = @idnienkhoa,
+		malop = @malop,
+		tenlop = @tenlop,
+		siso = @siso
+	where id = @id
+end
+--
+create procedure sp_tblLop_Delete
+@id int
+as
+begin
+	delete from tblLop
+	where id = @id
+end
+--
+--9 Giao Vien
+--
+create procedure sp_tblGiaoVien_SelectAll
+as
+begin
+	select tgv.idchucvu, tgv.magiaovien, tgv.tengiaovien, tgv.namsinh, tgv.gioitinh, tgv.noisinh, tgv.diachi from tblGiaoVien as tgv
+end
+--
+create procedure sp_tblGiaoVien_SelectID
+@id int
+as
+begin
+	select tgv.idchucvu, tgv.magiaovien, tgv.tengiaovien, tgv.namsinh, tgv.gioitinh, tgv.noisinh, tgv.diachi from tblGiaoVien as tgv
+	where id = @id
+end
+--
+create procedure sp_tblGiaoVien_Insert
+@idchucvu int,
+@magiaovien varchar(50),
+@tengiaovien nvarchar(100),
+@namsinh date,
+@gioitinh nvarchar(3),
+@noisinh nvarchar(100),
+@diachi nvarchar(100)
+as
+begin
+	insert into tblGiaoVien
+	(
+		idchucvu,
+		magiaovien,
+		tengiaovien,
+		namsinh,
+		gioitinh,
+		noisinh,
+		diachi
+	)
+	values
+	(
+		@idchucvu,
+		@magiaovien,
+		@tengiaovien,
+		@namsinh,
+		@gioitinh,
+		@noisinh,
+		@diachi
+	)
+end
+--
+create procedure sp_tblGiaoVien_Update
+@id int,
+@idchucvu int,
+@magiaovien varchar(50),
+@tengiaovien nvarchar(100),
+@namsinh date,
+@gioitinh nvarchar(3),
+@noisinh nvarchar(100),
+@diachi nvarchar(100)
+as
+begin
+	update tblGiaoVien
+	set
+		idchucvu = @idchucvu,
+		magiaovien = @magiaovien,
+		tengiaovien = @tengiaovien,
+		namsinh = @namsinh,
+		gioitinh = @gioitinh,
+		noisinh = @noisinh,
+		diachi = @diachi
+	where id = @id
+end
+--
+create procedure sp_tblGiaoVien_Delete
+@id int
+as
+begin
+	delete from tblGiaoVien
+	where id = @id
+end
+--
+--10 Sinh vien
+--
+create procedure sp_tblSinhVien_SelectAll
+as
+begin
+	select tsv.idlop, tsv.idtrangthai, tsv.masinhvien, tsv.tensinhvien, tsv.namsinh, tsv.gioitinh, tsv.noisinh, tsv.diachi from tblSinhVien as tsv
+end
+--
+create procedure sp_tblSinhVien_SelectID
+@id int
+as
+begin
+	select tsv.idlop, tsv.idtrangthai, tsv.masinhvien, tsv.tensinhvien, tsv.namsinh, tsv.gioitinh, tsv.noisinh, tsv.diachi from tblSinhVien as tsv
+	where id = @id
+end
+--
+create procedure sp_tblSinhVien_Insert
+@idlop int,
+@idtrangthai int,
+@masinhvien varchar(50),
+@tensinhvien nvarchar(100),
+@namsinh date,
+@gioitinh nvarchar(3),
+@noisinh nvarchar(100),
+@diachi nvarchar(100)
+as
+begin
+	insert into tblSinhVien
+	(
+		idlop,
+		idtrangthai,
+		masinhvien,
+		tensinhvien,
+		namsinh,
+		gioitinh,
+		noisinh,
+		diachi
+	)
+	values
+	(
+		@idlop,
+		@idtrangthai,
+		@masinhvien,
+		@tensinhvien,
+		@namsinh,
+		@gioitinh,
+		@noisinh,
+		@diachi
+	)
+end
+--
+create procedure sp_tblSinhVien_Update
+@id int,
+@idlop int,
+@idtrangthai int,
+@masinhvien varchar(50),
+@tensinhvien nvarchar(100),
+@namsinh date,
+@gioitinh nvarchar(3),
+@noisinh nvarchar(100),
+@diachi nvarchar(100)
+as
+begin
+	update tblSinhVien
+	set
+		idlop = @idlop,
+		idtrangthai = @idtrangthai,
+		masinhvien = @masinhvien,
+		tensinhvien = @tensinhvien,
+		namsinh = @namsinh,
+		gioitinh = @gioitinh,
+		noisinh = @noisinh,
+		diachi = @diachi
+	where id = @id
+end
+--
+create procedure sp_tblSinhVien_Delete
+@id int
+as
+begin
+	delete from tblSinhVien
+	where id = @id
+end
+--
+--11 Mon hoc
+--
+create procedure sp_tblMonHoc_SelectAll
+as
+begin
+	select tmh.idchuongtrinh, tmh.idgiaovien, tmh.idhocky, tmh.idkhoa, tmh.idtinchi, tmh.mamonhoc, tmh.tenmonhoc from tblMonHoc as tmh
+end
+--
+create procedure sp_tblMonHoc_SelectID
+@id int
+as
+begin
+	select tmh.idchuongtrinh, tmh.idgiaovien, tmh.idhocky, tmh.idkhoa, tmh.idtinchi, tmh.mamonhoc, tmh.tenmonhoc from tblMonHoc as tmh
+	where id = @id
+end
+--
+create procedure sp_tblMonHoc_Insert
+@idchuongtrinh int,
+@idgiaovien int,
+@idhocky int,
+@idkhoa int,
+@idtinchi int,
+@mamonhoc varchar(50),
+@tenmonhoc nvarchar(100)
+as
+begin
+	insert into tblMonHoc
+	(
+		idchuongtrinh,
+		idgiaovien,
+		idhocky,
+		idkhoa,
+		idtinchi,
+		mamonhoc,
+		tenmonhoc
+	)
+	values
+	(
+		@idchuongtrinh,
+		@idgiaovien,
+		@idhocky,
+		@idkhoa,
+		@idtinchi,
+		@mamonhoc,
+		@tenmonhoc
+	)
+end
+--
+create procedure sp_tblMonHoc_Update
+@id int,
+@idchuongtrinh int,
+@idgiaovien int,
+@idhocky int,
+@idkhoa int,
+@idtinchi int,
+@mamonhoc varchar(50),
+@tenmonhoc nvarchar(100)
+as
+begin
+	update tblMonHoc
+	set
+		idchuongtrinh = @idchuongtrinh,
+		idgiaovien = @idgiaovien,
+		idhocky = @idhocky,
+		idkhoa = @idkhoa,
+		idtinchi = @idtinchi,
+		mamonhoc = @mamonhoc,
+		tenmonhoc = @tenmonhoc
+	where id = @id
+end
+--
+create procedure sp_tblMonHoc_Delete
+@id int
+as
+begin
+	delete from tblMonHoc
+	where id = @id
+end
+--
+--12 Ket qua
+--
+
+--
+
+--
+
+--
+
+--
+
+--
+--13 Tai Khoan
+--
+create procedure sp_tblTaiKhoan_SelectAll
+as
+begin
+	select ttk.tentaikhoan, ttk.matkhau, ttk.nhom, ttk.hoten, ttk.namsinh, ttk.gioitinh, ttk.noisinh, ttk.diachi from tblTaiKhoan as ttk
+end
+--
+create procedure sp_tblTaiKhoan_SelectID
+@id int
+as
+begin
+	select ttk.tentaikhoan, ttk.matkhau, ttk.nhom, ttk.hoten, ttk.namsinh, ttk.gioitinh, ttk.noisinh, ttk.diachi from tblTaiKhoan as ttk
+	where id = @id
+end
+--
+create procedure sp_tblTaiKhoan_Insert
+@tentaikhoan nvarchar(100),
+@matkhau nvarchar(100),
+@nhom nvarchar(100),
+@hoten nvarchar(100),
+@namsinh date,
+@gioitinh nvarchar(3),
+@noisinh nvarchar(100),
+@diachi nvarchar(100)
+as
+begin
+	insert into tblTaiKhoan
+	(
+		tentaikhoan,
+		matkhau,
+		nhom,
+		hoten,
+		namsinh,
+		gioitinh,
+		noisinh,
+		diachi
+	)
+	values
+	(
+		@tentaikhoan,
+		@matkhau,
+		@nhom,
+		@hoten,
+		@namsinh,
+		@gioitinh,
+		@noisinh,
+		@diachi
+	)
+end
+--
+create procedure sp_tblTaiKhoan_Update
+@id int,
+@tentaikhoan nvarchar(100),
+@matkhau nvarchar(100),
+@nhom nvarchar(100),
+@hoten nvarchar(100),
+@namsinh date,
+@gioitinh nvarchar(3),
+@noisinh nvarchar(100),
+@diachi nvarchar(100)
+as
+begin
+	update tblTaiKhoan
+	set
+		tentaikhoan = @tentaikhoan,
+		matkhau = @matkhau,
+		nhom = @nhom,
+		hoten = @hoten,
+		namsinh = @namsinh,
+		gioitinh = @gioitinh,
+		noisinh = @noisinh,
+		diachi = @diachi
+	where id = @id
+end
+--
+create procedure sp_tblTaiKhoan_Delete
+@id int
+as
+begin
+	delete from tblTaiKhoan
+	where id = @id
+end

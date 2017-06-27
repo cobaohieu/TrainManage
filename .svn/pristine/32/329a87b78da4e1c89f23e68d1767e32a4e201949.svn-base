@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <connectionStrings>
+    <add name="connect" connectionString="Data Source=K55VD; Initial Catalog=trainmanage; UID=sa; PWD=123456789"/>
+  </connectionStrings>
+</configuration>

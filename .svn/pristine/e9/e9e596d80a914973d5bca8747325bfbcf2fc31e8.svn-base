@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PendingCommit>
+  <CommitComment />
+  <TrackedFiles>
+    <RelativePath>MvcTrainManage\App_Start\FilterConfig.cs</RelativePath>
+    <RelativePath>MvcTrainManage\App_Start\RouteConfig.cs</RelativePath>
+    <RelativePath>MvcTrainManage\App_Start\WebApiConfig.cs</RelativePath>
+    <RelativePath>MvcTrainManage\Global.asax</RelativePath>
+    <RelativePath>MvcTrainManage\Global.asax.cs</RelativePath>
+    <RelativePath>MvcTrainManage\MvcTrainManage.csproj</RelativePath>
+    <RelativePath>MvcTrainManage\packages.config</RelativePath>
+    <RelativePath>MvcTrainManage\Properties\AssemblyInfo.cs</RelativePath>
+    <RelativePath>MvcTrainManage\Views\Web.config</RelativePath>
+    <RelativePath>MvcTrainManage\Web.config</RelativePath>
+    <RelativePath>MvcTrainManage\Web.Debug.config</RelativePath>
+    <RelativePath>MvcTrainManage\Web.Release.config</RelativePath>
+    <RelativePath>TrainingManagement\frmGiaoVien.Designer.cs</RelativePath>
+    <RelativePath>TrainingManagement\frmGiaoVien.resx</RelativePath>
+    <RelativePath>TrainManageWeb\account.Master</RelativePath>
+    <RelativePath>TrainManageWeb\account.Master.cs</RelativePath>
+    <RelativePath>TrainManageWeb\account.Master.designer.cs</RelativePath>
+    <RelativePath>TrainManageWeb\giaovien.Master</RelativePath>
+    <RelativePath>TrainManageWeb\giaovien.Master.cs</RelativePath>
+    <RelativePath>TrainManageWeb\giaovien.Master.designer.cs</RelativePath>
+    <RelativePath>TrainManageWeb\login.Master</RelativePath>
+    <RelativePath>TrainManageWeb\login.Master.cs</RelativePath>
+    <RelativePath>TrainManageWeb\login.Master.designer.cs</RelativePath>
+    <RelativePath>TrainmanageWeb\Properties\AssemblyInfo.cs</RelativePath>
+    <RelativePath>TrainManageWeb\quanly.Master</RelativePath>
+    <RelativePath>TrainManageWeb\quanly.Master.cs</RelativePath>
+    <RelativePath>TrainManageWeb\quanly.Master.designer.cs</RelativePath>
+    <RelativePath>TrainManageWeb\quantri.Master</RelativePath>
+    <RelativePath>TrainManageWeb\quantri.Master.cs</RelativePath>
+    <RelativePath>TrainManageWeb\quantri.Master.designer.cs</RelativePath>
+    <RelativePath>TrainManageWeb\sinhvien.Master</RelativePath>
+    <RelativePath>TrainManageWeb\sinhvien.Master.cs</RelativePath>
+    <RelativePath>TrainManageWeb\sinhvien.Master.designer.cs</RelativePath>
+    <RelativePath>TrainManageWeb\taikhoan\login.aspx</RelativePath>
+    <RelativePath>TrainManageWeb\taikhoan\login.aspx.cs</RelativePath>
+    <RelativePath>TrainManageWeb\taikhoan\login.aspx.designer.cs</RelativePath>
+    <RelativePath>TrainManageWeb\taikhoan\signup.aspx</RelativePath>
+    <RelativePath>TrainManageWeb\taikhoan\signup.aspx.cs</RelativePath>
+    <RelativePath>TrainManageWeb\taikhoan\signup.aspx.designer.cs</RelativePath>
+    <RelativePath>TrainmanageWeb\TrainmanageWeb.csproj</RelativePath>
+    <RelativePath>TrainmanageWeb\Web.config</RelativePath>
+    <RelativePath>TrainManageWeb\Web.config</RelativePath>
+    <RelativePath>TrainManageWeb\Web.Debug.config</RelativePath>
+    <RelativePath>TrainmanageWeb\Web.Debug.config</RelativePath>
+    <RelativePath>TrainmanageWeb\Web.Release.config</RelativePath>
+    <RelativePath>TrainManageWeb\Web.Release.config</RelativePath>
+  </TrackedFiles>
+  <ExcludedItems />
+  <WorkItems />
+</PendingCommit>

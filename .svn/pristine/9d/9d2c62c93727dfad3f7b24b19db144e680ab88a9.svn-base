@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<repositories>
+  <repository path="..\MvcTrainManage\packages.config" />
+  <repository path="..\TrainmanageWeb\packages.config" />
+</repositories>

@@ -1,0 +1,130 @@
+use trainmanage
+--Khoa
+--
+create procedure sp_tblKhoa_SelectAll
+as
+begin
+	select tk.makhoa, tk.tenkhoa, tk.sodienthoai from tblKhoa as tk
+end
+--
+create procedure sp_tblKhoa_Insert
+@makhoa varchar(50),
+@tenkhoa nvarchar(100),
+@sodienthoai varchar(11)
+as
+begin
+	insert into tblKhoa
+	(
+		makhoa,
+		tenkhoa,
+		sodienthoai
+	)
+	values
+	(
+		@makhoa,
+		@tenkhoa,
+		@sodienthoai
+	)
+end
+--
+create procedure sp_tblKhoa_Update
+@id int,
+@makhoa varchar(50),
+@tenkhoa nvarchar(100),
+@sodienthoai varchar(11)
+as
+begin
+	update tblKhoa
+	set 
+		makhoa = @makhoa,
+		tenkhoa = @tenkhoa,
+		sodienthoai = @sodienthoai
+	where id = @id
+end
+
+create procedure sp_tblKhoa_Delete
+@id int
+as
+begin
+	delete from tblKhoa
+	where id = @id
+end
+--
+--Chuc Vu
+--
+create procedure sp_tblChucvu_SelectAll
+as
+begin
+	select cv.machucvu, cv.tenchucvu from tblChucVu as cv
+end
+--
+create procedure sp_tblChucVu_Insert
+@machucvu varchar(50),
+@tenchucvu nvarchar(100)
+as
+begin
+	insert into tblChucVu
+	(
+		machucvu,
+		tenchucvu
+	)
+	values
+	(
+		@machucvu,
+		@tenchucvu
+	)
+end
+--
+create procedure sp_tblChucVu_Update
+@id int,
+@machucvu varchar(50),
+@tenchucvu nvarchar(100)
+as
+begin
+	update tblChucVu
+	set 
+		machucvu = @machucvu,
+		tenchucvu = @tenchucvu
+	where id = @id
+end
+--
+create procedure sp_tblChucVu_Delete
+@id int
+as
+begin
+	delete from tblChucVu
+	where id = @id
+end
+--
+--nien khoa
+--
+create procedure sp_tblNienKhoa_SelectAll
+as
+begin
+	select nk.manienkhoa, nk.tennienkhoa, nk.nambatdau, nk.namketthuc from tblNienKhoa as nk
+end
+--
+--tin chi
+--
+create procedure sp_tblTinChi_SelectAll
+as
+begin
+	select tc.matinchi, tc.sotinchi from tblTinChi as tc
+end
+--
+--hoc ky
+--
+create procedure sp_tblHocKy_SelectAll
+as
+begin
+	select hk.mahocky, hk.tenhocky from tblHocKy as hk
+end
+--
+--chuong trinh dao tao
+--
+create procedure sp_tblChuongTrinhDaoTao_SelectAll
+as
+begin
+	select ctdt.machuongtrinh, ctdt.tenchuongtrinh from tblChuongTrinhDaoTao as ctdt
+end
+--

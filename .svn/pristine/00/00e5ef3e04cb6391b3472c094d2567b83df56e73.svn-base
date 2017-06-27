@@ -1,0 +1,43 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TrainingManagement.BLL
+{
+    class TaiKhoanBLL
+    {
+        DAL.TaiKhoanDAL dal;
+        public TaiKhoanBLL()
+        {
+            dal = new DAL.TaiKhoanDAL();
+        }
+        public DataTable getAllTaiKhoan()
+        {
+            return dal.getAllTaiKhoan();
+        }
+        public DataTable getIDTaiKhoan(int id)
+        {
+            return dal.getIDTaiKhoan(id);
+        }
+        public bool insertTaiKhoan(Entities.tblTaiKhoan tk)
+        {
+            return dal.insertTaiKhoan(tk);
+        }
+        public bool updateTaiKhoan(Entities.tblTaiKhoan tk)
+        {
+            return dal.updateTaiKhoan(tk);
+        }
+        public bool deleteTaiKhoan(Entities.tblTaiKhoan tk)
+        {
+            return dal.deleteTaiKhoan(tk);
+        }
+        public DataTable checkTaiKhoan(string nhom)
+        {
+            return dal.checkTaiKhoan(nhom);
+        }
+    }
+}

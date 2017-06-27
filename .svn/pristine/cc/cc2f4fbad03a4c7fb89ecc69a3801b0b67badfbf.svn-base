@@ -1,0 +1,42 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="home.Master.cs" Inherits="TrainManageWeb.Home" %>
+
+<!DOCTYPE html>
+
+<html lang="vi" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+    <title>Train Management</title>
+	<meta name="description" content="Niên luận về quản lý hệ thống luận văn" />
+	<meta name="author" content="Co Hieu va Mai Nguyen" />
+	<meta name="keyword" content="nien luan, luan van" />
+	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder ID="main" runat="server">
+            <div id="top">
+               <div id="menubar">
+                  <a href="#home">Trang chủ</a>
+                  <a href="#news">Tin tức</a>
+                  <a href="#contact">Liên hệ</a>
+                  <a href="#about">Giới thiệu</a>
+                  <a href="#register">Đăng ký</a>
+               </div>
+               <div id="center">
+
+               </div>
+               <div id="bottom">
+
+               </div>
+            </div>
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

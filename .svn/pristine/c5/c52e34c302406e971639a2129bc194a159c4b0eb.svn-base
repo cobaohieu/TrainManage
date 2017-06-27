@@ -1,0 +1,130 @@
+Create database trainmanage
+On
+(NAME = 'trainmanage_data', FILENAME = 'C:\Databases\trainmanagedata.mdf',
+ SIZE = 10, MAXSIZE = 50, FILEGROWTH = 5)
+Log on
+(NAME = 'trainmanage_log', FILENAME = 'C:\Databases\trainmanagelog.mdf',
+ SIZE = 5MB, MAXSIZE = 25MB, FILEGROWTH = 5MB)
+Go
+--drop Database trainmanage
+use trainmanage
+--
+create table tblKhoa(
+idkhoa int primary key,
+tenkhoa nvarchar(50),
+sodienthoai varchar(10)
+)
+--
+create table tblChucVu(
+idchucvu int primary key,
+tenchucvu nvarchar(50)
+)
+--
+create table tblNienKhoa(
+idnienkhoa int primary key,
+tennienkhoa nvarchar(50),
+nambatdau smalldatetime,
+namketthuc smalldatetime
+)
+--
+create table tblTinChi(
+idtinchi int primary key,
+sotinchi varchar(2)
+)
+--
+create table tblHocKy(
+idhocky int primary key,
+tenhocky nvarchar(50)
+)
+--
+create table tblTrangThai(
+idtrangthai int primary key,
+tentrangthai nvarchar(50)
+)
+--
+create table tblChuongTrinhDaoTao(
+idchuongtrinh int primary key,
+tenchuongtrinh nvarchar(50)
+)
+--
+create table tblLop(
+idlop int primary key,
+tenlop nvarchar(50),
+siso int,
+idkhoa int,
+idnienkhoa int,
+foreign key (idkhoa) references tblKhoa(idkhoa) on update cascade on delete cascade,
+foreign key (idnienkhoa) references tblNienKhoa(idnienkhoa) on update cascade on delete cascade
+)
+--
+create table tblTaiKhoan(
+id int primary key, 
+tentaikhoan nvarchar(50), 
+matkhau nvarchar(50), 
+nhom nvarchar(50)
+)
+--
+create table tblQuanTri(
+idquantri int primary key,
+tenquantri nvarchar(50),
+namsinh smalldatetime,
+gioitinh nvarchar(3),
+noisinh nvarchar(50),
+diachi nvarchar(50),
+)--
+create table tblQuanLy(
+idquanly int primary key,
+tenquanly nvarchar(50),
+namsinh smalldatetime,
+gioitinh nvarchar(3),
+noisinh nvarchar(50),
+diachi nvarchar(50),
+)
+--
+create table tblGiaoVien(
+idgiaovien int primary key,
+tengiaovien nvarchar(50),
+namsinh smalldatetime,
+gioitinh nvarchar(3),
+noisinh nvarchar(50),
+diachi nvarchar(50),
+idchucvu int,
+foreign key (idchucvu) references tblChucVu(idchucvu) on update cascade on delete cascade
+)
+--
+create table tblSinhVien(
+idsinhvien int primary key,
+tensinhvien nvarchar(50),
+namsinh smalldatetime,
+gioitinh nvarchar(3),
+noisinh nvarchar(50),
+diachi nvarchar(50),
+idlop int foreign key references tblLop(idlop) on update cascade on delete cascade,
+idtrangthai int foreign key references tblTrangThai(idtrangthai) on update cascade on delete cascade
+)
+--
+create table tblMonHoc(
+idmonhoc int primary key,
+tenmonhoc nvarchar(50),
+idgiaovien int,
+idhocky int,
+idkhoa int,
+idtinchi int, 
+idchuongtrinh int,
+foreign key (idgiaovien) references tblGiaoVien(idgiaovien) on update cascade on delete cascade,
+foreign key (idkhoa) references tblKhoa(idkhoa) on update cascade on delete cascade,
+foreign key (idhocky) references tblHocKy(idhocky) on update cascade on delete cascade,
+foreign key (idtinchi) references tblTinChi(idtinchi) on update cascade on delete cascade,
+foreign key (idchuongtrinh) references tblChuongTrinhDaoTao(idchuongtrinh) on update cascade on delete cascade
+)
+--
+create table tblKetQua(
+idsinhvien int references tblSinhVien(idsinhvien) on update cascade on delete cascade,
+idhocky int references tblHocKy(idhocky) on update cascade on delete cascade,
+hoten nvarchar(50),
+diemtrungbinh varchar(3),
+diemtongket nvarchar(3),
+hanhkiem nvarchar(50),
+ghichu nvarchar(100),
+primary key(idsinhvien,idhocky)
+)
