@@ -165,13 +165,46 @@ namespace TrainingManagement.DAL
             try
             {
                 con = ds.getConnect();
+                cmd = new SqlCommand();
                 da = new SqlDataAdapter(sql, con);
                 con.Open();
                 cmd.CommandText = sql;
+                cmd.Connection = con;
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add("@tentaikhoan", SqlDbType.NVarChar).Value = tentaikhoan;
                 cmd.Parameters.Add("@matkhau", SqlDbType.NVarChar).Value = matkhau;
-                int x = (int)cmd.ExecuteScalar();
+                da = new SqlDataAdapter();
+                da.SelectCommand = cmd;
+                dt = new DataTable();
+                da.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                da.Dispose();
+                con.Close();
+            }
+            return dt;
+        }
+        public DataTable checkGroupTaiKhoan(string tentaikhoan, string matkhau)
+        {
+            string sql = "sp_tblTaiKhoan_CheckGroup";
+            try
+            {
+                con = ds.getConnect();
+                cmd = new SqlCommand();
+                da = new SqlDataAdapter(sql, con);
+                con.Open();
+                cmd.CommandText = sql;
+                cmd.Connection = con;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@tentaikhoan", SqlDbType.NVarChar).Value = tentaikhoan;
+                cmd.Parameters.Add("@matkhau", SqlDbType.NVarChar).Value = matkhau;
+                da = new SqlDataAdapter();
+                da.SelectCommand = cmd;
                 dt = new DataTable();
                 da.Fill(dt);
             }

@@ -25,6 +25,11 @@ namespace TrainingManagement.GUI
             dt = bllLop.getAllLop();
             dgvLop.DataSource = dt;
         }
+        string flag;
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
+        }
 
     }
 }

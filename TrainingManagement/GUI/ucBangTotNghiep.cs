@@ -15,5 +15,15 @@ namespace TrainingManagement.GUI
         {
             InitializeComponent();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnView_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

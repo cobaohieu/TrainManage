@@ -44,6 +44,35 @@ namespace TrainingManagement.DAL
             }
             return dt;
         }
+        public DataTable getViewMonHoc(string mamonhoc)
+        {
+            string sql = "sp_tblMonHoc_View";
+            try
+            {
+                con = ds.getConnect();
+                da = new SqlDataAdapter(sql, con);
+                con.Open();
+                cmd = new SqlCommand();
+                cmd.CommandText = sql;
+                cmd.Connection = con;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@mamonhoc", SqlDbType.NVarChar).Value = mamonhoc;
+                da = new SqlDataAdapter();
+                da.SelectCommand = cmd;
+                dt = new DataTable();
+                da.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                da.Dispose();
+                con.Close();
+            }
+            return dt;
+        }
         public DataTable getIDMonHoc(int id)
         {
             string sql = "sp_tblMonHoc_SelectID";

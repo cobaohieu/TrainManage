@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections;
+using System.Configuration;
+using System.Data.Entity;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,6 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace TrainingManagement
 {
@@ -55,6 +59,14 @@ namespace TrainingManagement
                 return true;
             }
             return base.ProcessDialogKey(keyData);
+            /*
+            
+            if (Form.ModifierKeys == Keys.None && keyData == Keys.Enter)
+            {
+                btnLogin.PerformClick();
+            }
+            return base.ProcessDialogKey(keyData); 
+             */
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -97,100 +109,75 @@ namespace TrainingManagement
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            this.txtUser.Focus();
+            txtUser.Focus();
         }
 
         public bool checkObject()
         {
-            if(string.IsNullOrWhiteSpace(txtUser.Text))
+            string tendangnhap = txtUser.Text;
+            string matkhau = txtPass.Text;
+            if(string.IsNullOrWhiteSpace(tendangnhap))
             {
-                MessageBox.Show("Bạn chưa nhập tên tài khoản", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng nhập vào Tên tài khoản!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtUser.Focus();
                 return false;
             }
-            if(string.IsNullOrWhiteSpace(txtPass.Text)){
-                MessageBox.Show("Bạn chưa nhập mật khẩu","Cảnh báo",MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            if(string.IsNullOrWhiteSpace(matkhau)){
+                MessageBox.Show("Vui lòng nhập vào Mật khẩu!","Cảnh báo",MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             return true;
         }
-
+        
         private void btnLogin_Click(object sender, EventArgs e)
-        {   /* 
+        {
+            string tendangnhap = txtUser.Text.Trim();
+            string matkhau = txtPass.Text.Trim();
             try
             {
                 DataTable dt = new DataTable();
-                dt = bllTaiKhoan.checkTaiKhoan(txtPass.Text.Trim(),txtUser.Text.Trim());
-                checkObject();
-                if (x == 1) 
+                dt = bllTaiKhoan.checkTaiKhoan(tendangnhap, matkhau);
+                if (checkObject())
                 {
-                    //đăng nhập thành công 
-                    frmQuanTri _frmQuanTri = new frmQuanTri();
-                    this.Hide();
-                    _frmQuanTri.Show();
-                } 
-                else { 
-                    //đăng nhập thất bại 
-                    lblIncorrect.Text = "Account Or Password Is Not Correct"; 
-                    txtAccount.Text = ""; 
-                    txtPassword.Text = ""; 
-                    txtAccount.Focus(); 
-                } 
-            } 
-            catch (Exception ex) 
-            { 
-                MessageBox.Show(ex.Message); 
-            }
-            if(dt.Rows.Count > 0)
-            {
-                string permission = dt.Rows[0][2].ToString;
-
-            }
-
-            DataTable dt = new DataTable();
-            */
-            string tmp = txtUser.Text.Substring(0, 2);
-            try
-            {
-                SqlConnection conn = new SqlConnection(@"server=KHDT-HIEU;database=trainmanage;Integrated Security=true");
-                SqlCommand comd = new SqlCommand("select * from tblTaiKhoan WHERE tentaikhoan=@tentaikhoan and matkhau=@matkhau", conn);
-                conn.Open();
-                comd.Parameters.AddWithValue("@tentaikhoan", txtUser.Text.Trim());
-                comd.Parameters.AddWithValue("@matkhau", txtPass.Text.Trim());
-                SqlDataReader dr = comd.ExecuteReader();
-                if (dr.HasRows == false)
-                {
-                    MessageBox.Show("Loi user hoac pass");
-                }
-                else
-                {
-                    if (tmp == "gv")
+                    if (dt.Rows[0][0].ToString().Trim() != "0")
                     {
-                        this.Hide();
-                        MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        frmGiaoVien _frmGiaoVien = new frmGiaoVien();
-                        _frmGiaoVien.Show();
-                    }
-                    else if (tmp == "ql")
-                    {
-                        this.Hide();
-                        frmQuanLy _frmQuanLy = new frmQuanLy();
-                        MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        _frmQuanLy.Show();
+                        string nhom = dt.Rows[0][1].ToString().Trim();
+                        if (nhom == "Admin")
+                        {
+                            this.Hide();
+                            MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            frmQuanTri _frmQuanTri = new frmQuanTri();
+                            _frmQuanTri.Show();
+                        }
+                        else if (nhom == "Manager")
+                        {
+                            this.Hide();
+                            frmQuanLy _frmQuanLy = new frmQuanLy();
+                            MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            _frmQuanLy.Show();
+                        }
+                        else if (nhom == "Teacher")
+                        {
+                            this.Hide();
+                            MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            frmGiaoVien _frmGiaoVien = new frmGiaoVien();
+                            _frmGiaoVien.Show();
+                        }
+                        else
+                        {
+                            this.Hide();
+                            MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
                     }
                     else
                     {
-                        this.Hide();
-                        MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        frmQuanTri _frmQuanTri = new frmQuanTri();
-                        _frmQuanTri.Show();
+                        MessageBox.Show("Xin vui lòng kiểm tra lại: Tên tài khoản hoặc Mật khẩu!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message.ToString(), "Loi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message.ToString(), "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -468,13 +468,14 @@ go
 create procedure sp_tblTrangThai_ViewSinhVien
 as
 begin
-	select a.masinhvien, a.tensinhvien, c.tenlop, b.tentrangthai 
+	select a.id as N'STT',a.masinhvien as N'Mã sinh viên', a.tensinhvien as N'Tên sinh viên', c.tenlop as N'Tên lớp', b.tentrangthai as N'Tên trạng thái'
 	from tblSinhVien a
 		inner join tblTrangThai b on a.idtrangthai = b.id
 		inner join tblLop c on a.idlop = c.id
 	order by a.id
 end
 go
+--exec sp_tblTrangThai_ViewSinhVien
 --
 if object_id('sp_tblTrangThai_Insert')is not null
 	drop proc sp_tblTrangThai_Insert
@@ -669,16 +670,20 @@ if object_id('sp_tblMonHoc_View')is not null
 	drop proc sp_tblMonHoc_view
 go
 create procedure sp_tblMonHoc_View
+@keyword varchar(10)
 as
 begin
-	select a.mamonhoc, a.tenmonhoc, b.tenchuongtrinh, c.tenhocky, d.sotinchi
+	set @keyword = Ltrim(Rtrim(@keyword))
+	select a.mamonhoc as N'Mã môn học', a.tenmonhoc as N'Tên môn học', b.tenchuongtrinh as N'Tên chương trình', c.tenhocky as N'Tên học kỳ', d.sotinchi as N'Số tín chỉ'
 	from tblMonHoc a
 		inner join tblChuongTrinhDaoTao b on a.idchuongtrinh = b.id
 		inner join tblHocKy c on a.idhocky = c.id
 		inner join tblTinChi d on a.idtinchi = d.id
+	where a.mamonhoc like '%' + @keyword + '%'
 	order by a.id
 end
 go
+--exec sp_tblMonHoc_View 'mh1'
 --
 if object_id('sp_tblMonHoc_Insert')is not null
 	drop proc sp_tblMonHoc_Insert
@@ -1037,12 +1042,14 @@ go
 create procedure sp_tblKetQua_BangtotNghiepSinhVien
 as
 begin
-	select a.masinhvien, a.tensinhvien, b.tenlop, a.namsinh, a.gioitinh, a.noisinh, a.diachi, d.tenmonhoc, c.diemthilan1, c.diemthilan2, c.diemtongket, c.diemtrungbinh ,c.hanhkiem
+	select a.masinhvien, a.tensinhvien, b.tenlop, f.tennienkhoa, g.tenhocky, d.tenmonhoc, c.diemthilan1, c.diemthilan2, c.diemtongket, c.diemtrungbinh ,c.hanhkiem
 	from tblSinhVien a
 		inner join tblLop b on a.idlop = b.id
 		inner join tblKetQua c on a.id = c.idsinhvien
 		inner join tblMonHoc d on c.idmonhoc = d.id
 		inner join tblChuongTrinhDaoTao e on d.idchuongtrinh = e.id
+		inner join tblNienKhoa f on b.idnienkhoa = f.id
+		inner join tblHocKy g on d.idhocky = f.id
 	order by a.id
 end
 go
@@ -1214,11 +1221,35 @@ create procedure sp_tblTaiKhoan_Check
 @matkhau nvarchar(100)
 as
 begin
-	select count(*)
-	from tblTaiKhoan
-	where @tentaikhoan = @tentaikhoan and @matkhau = matkhau
+	select count(*), a.nhom 
+	from tblTaiKhoan a
+	where tentaikhoan = @tentaikhoan and matkhau = @matkhau
+	group by nhom
 end
 go
+--exec sp_tblTaiKhoan_Check 'qt', '12345678'
+--- 
+if object_id('sp_tblTaiKhoan_CheckGroup')is not null
+	drop proc sp_tblTaiKhoan_CheckGroup
+go
+create procedure sp_tblTaiKhoan_CheckGroup
+@tentaikhoan nvarchar(100),
+@matkhau nvarchar(100)
+as
+begin
+	declare @nhom nvarchar(100)
+	set @nhom = (select nhom from tblTaiKhoan where tentaikhoan=@tentaikhoan and matkhau = @matkhau)
+	if(@nhom = N'Admin')
+		return N'Admin';
+	else if(@nhom = N'Manager')
+		return N'Manager';
+	else if(@nhom = N'Teacher')
+		return N'Teacher';
+	else
+		return 3;
+end
+go
+--exec sp_tblTaiKhoan_CheckGroup 'gv1' ,'12345678'
 --
 --13 Thong Tin
 --
@@ -1251,12 +1282,13 @@ create procedure sp_tblThongTin_View
 
 as
 begin
-	select b.tentaikhoan,a.hoten, a.chucvu, a.namsinh, a.gioitinh, a.diachi
+	select b.id as N'STT', b.tentaikhoan as N'Tên Tài Khoản',a.hoten as N'Họ tên', a.chucvu as N'Chức vụ', a.namsinh as N'Năm sinh', a.gioitinh as N'Giới tính', a.diachi as N'Địa chỉ'
 	from tblThongTin a
 		inner join tblTaiKhoan b on a.idtaikhoan = b.id
 	order by b.id
 end
 go
+--exec sp_tblThongTin_View
 --
 if object_id('sp_tblThongTin_Insert')is not null
 	drop proc sp_tblThongTin_Insert
@@ -1323,6 +1355,8 @@ begin
 end
 go
 --- 
+---------------------Windows Form---------
+
 ---------------------Search---------------------
 --
 if object_id('sp_tblMonHoc_FindDanhSachSinhVien')is not null
@@ -1468,7 +1502,8 @@ begin
 	where tensinhvien like '%' + @keyword + '%'
 end
 go
---Check Web
+
+---------Check Web-------------------------
 --
 if object_id('sp_checkAccountGroup')is not null
 	drop proc sp_checkAccountGroup

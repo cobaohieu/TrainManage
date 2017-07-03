@@ -19,6 +19,10 @@ namespace TrainingManagement.BLL
         {
             return dal.getAllThongTin();
         }
+        public DataTable getViewThongTin()
+        {
+            return dal.getViewThongTin();
+        }
         public DataTable getIDThongTin(int id)
         {
             return dal.getIDThongTin(id);

@@ -244,6 +244,7 @@
             this.btnAdd.TabIndex = 65;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // txtIDNienKhoa
             // 

@@ -261,10 +261,10 @@
     <Compile Include="GUI\tblChuongTrinhDaoTao.Designer.cs">
       <DependentUpon>tblChuongTrinhDaoTao.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\QuanTri\ucQLNguoiDung.cs">
+    <Compile Include="GUI\ucQLNguoiDung.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\QuanTri\ucQLNguoiDung.Designer.cs">
+    <Compile Include="GUI\ucQLNguoiDung.Designer.cs">
       <DependentUpon>ucQLNguoiDung.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\tblHocKy.cs">
@@ -291,10 +291,10 @@
     <Compile Include="GUI\tblLop.Designer.cs">
       <DependentUpon>tblLop.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\GiaoVien\ucGiaoVien.cs">
+    <Compile Include="GUI\ucGiaoVien.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\GiaoVien\ucGiaoVien.Designer.cs">
+    <Compile Include="GUI\ucGiaoVien.Designer.cs">
       <DependentUpon>ucGiaoVien.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\tblMonHoc.cs">
@@ -351,28 +351,28 @@
     <Compile Include="GUI\ucChiTietCacMonHoc.Designer.cs">
       <DependentUpon>ucChiTietCacMonHoc.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\GiaoVien\ucDSChuongTrinhGV.cs">
+    <Compile Include="GUI\ucDSChuongTrinhGV.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\GiaoVien\ucDSChuongTrinhGV.Designer.cs">
+    <Compile Include="GUI\ucDSChuongTrinhGV.Designer.cs">
       <DependentUpon>ucDSChuongTrinhGV.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\QuanLy\ucDSChuongTrinhQL.cs">
+    <Compile Include="GUI\ucDSChuongTrinhQL.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\QuanLy\ucDSChuongTrinhQL.Designer.cs">
+    <Compile Include="GUI\ucDSChuongTrinhQL.Designer.cs">
       <DependentUpon>ucDSChuongTrinhQL.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\GiaoVien\ucDSMonHocGV.cs">
+    <Compile Include="GUI\ucDSMonHocGV.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\GiaoVien\ucDSMonHocGV.Designer.cs">
+    <Compile Include="GUI\ucDSMonHocGV.Designer.cs">
       <DependentUpon>ucDSMonHocGV.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\QuanLy\ucDSMonHocQL.cs">
+    <Compile Include="GUI\ucDSMonHocQL.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\QuanLy\ucDSMonHocQL.Designer.cs">
+    <Compile Include="GUI\ucDSMonHocQL.Designer.cs">
       <DependentUpon>ucDSMonHocQL.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\ucDSSVCuaMotMonHoc.cs">
@@ -417,53 +417,53 @@
     <Compile Include="GUI\ucQLChuongTrinh.Designer.cs">
       <DependentUpon>ucQLChuongTrinh.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\QuanLy\ucQuanLy.cs">
+    <Compile Include="GUI\ucQuanLy.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\QuanLy\ucQuanLy.Designer.cs">
+    <Compile Include="GUI\ucQuanLy.Designer.cs">
       <DependentUpon>ucQuanLy.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\QuanTri\ucQuanTri.cs">
+    <Compile Include="GUI\ucQuanTri.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\QuanTri\ucQuanTri.Designer.cs">
+    <Compile Include="GUI\ucQuanTri.Designer.cs">
       <DependentUpon>ucQuanTri.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\GiaoVien\ucTKKetQuaGV.cs">
+    <Compile Include="GUI\ucTKKetQuaGV.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\GiaoVien\ucTKKetQuaGV.Designer.cs">
+    <Compile Include="GUI\ucTKKetQuaGV.Designer.cs">
       <DependentUpon>ucTKKetQuaGV.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\QuanLy\ucTKKetQuaQL.cs">
+    <Compile Include="GUI\ucTKKetQuaQL.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\QuanLy\ucTKKetQuaQL.Designer.cs">
+    <Compile Include="GUI\ucTKKetQuaQL.Designer.cs">
       <DependentUpon>ucTKKetQuaQL.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\ucTrangThai.cs">
+    <Compile Include="GUI\ucQLTrangThai.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\ucTrangThai.Designer.cs">
-      <DependentUpon>ucTrangThai.cs</DependentUpon>
+    <Compile Include="GUI\ucQLTrangThai.Designer.cs">
+      <DependentUpon>ucQLTrangThai.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\GiaoVien\ucTTGiaoVien.cs">
+    <Compile Include="GUI\ucTTGiaoVien.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\GiaoVien\ucTTGiaoVien.Designer.cs">
+    <Compile Include="GUI\ucTTGiaoVien.Designer.cs">
       <DependentUpon>ucTTGiaoVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\QuanLy\ucTTQuanLy.cs">
+    <Compile Include="GUI\ucTTQuanLy.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\QuanLy\ucTTQuanLy.Designer.cs">
+    <Compile Include="GUI\ucTTQuanLy.Designer.cs">
       <DependentUpon>ucTTQuanLy.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\QuanTri\ucTTQuanTri.cs">
+    <Compile Include="GUI\ucTTCaNhan.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\QuanTri\ucTTQuanTri.Designer.cs">
-      <DependentUpon>ucTTQuanTri.cs</DependentUpon>
+    <Compile Include="GUI\ucTTCaNhan.Designer.cs">
+      <DependentUpon>ucTTCaNhan.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -471,6 +471,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>trainmanage.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="trainmanage1.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>trainmanage.dbml</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <EmbeddedResource Include="frmGiaoVien.resx">
       <DependentUpon>frmGiaoVien.cs</DependentUpon>
@@ -547,44 +553,44 @@
     <EmbeddedResource Include="frmQuanTri.resx">
       <DependentUpon>frmQuanTri.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\GiaoVien\ucDSChuongTrinhGV.resx">
+    <EmbeddedResource Include="GUI\ucDSChuongTrinhGV.resx">
       <DependentUpon>ucDSChuongTrinhGV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\GiaoVien\ucDSMonHocGV.resx">
+    <EmbeddedResource Include="GUI\ucDSMonHocGV.resx">
       <DependentUpon>ucDSMonHocGV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\GiaoVien\ucGiaoVien.resx">
+    <EmbeddedResource Include="GUI\ucGiaoVien.resx">
       <DependentUpon>ucGiaoVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\GiaoVien\ucTKKetQuaGV.resx">
+    <EmbeddedResource Include="GUI\ucTKKetQuaGV.resx">
       <DependentUpon>ucTKKetQuaGV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\GiaoVien\ucTTGiaoVien.resx">
+    <EmbeddedResource Include="GUI\ucTTGiaoVien.resx">
       <DependentUpon>ucTTGiaoVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\QuanLy\ucDSChuongTrinhQL.resx">
+    <EmbeddedResource Include="GUI\ucDSChuongTrinhQL.resx">
       <DependentUpon>ucDSChuongTrinhQL.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\QuanLy\ucDSMonHocQL.resx">
+    <EmbeddedResource Include="GUI\ucDSMonHocQL.resx">
       <DependentUpon>ucDSMonHocQL.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\QuanLy\ucQuanLy.resx">
+    <EmbeddedResource Include="GUI\ucQuanLy.resx">
       <DependentUpon>ucQuanLy.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\QuanLy\ucTKKetQuaQL.resx">
+    <EmbeddedResource Include="GUI\ucTKKetQuaQL.resx">
       <DependentUpon>ucTKKetQuaQL.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\QuanLy\ucTTQuanLy.resx">
+    <EmbeddedResource Include="GUI\ucTTQuanLy.resx">
       <DependentUpon>ucTTQuanLy.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\QuanTri\ucQLNguoiDung.resx">
+    <EmbeddedResource Include="GUI\ucQLNguoiDung.resx">
       <DependentUpon>ucQLNguoiDung.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\QuanTri\ucQuanTri.resx">
+    <EmbeddedResource Include="GUI\ucQuanTri.resx">
       <DependentUpon>ucQuanTri.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\QuanTri\ucTTQuanTri.resx">
-      <DependentUpon>ucTTQuanTri.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\ucTTCaNhan.resx">
+      <DependentUpon>ucTTCaNhan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\tblChuongTrinhDaoTao.resx">
       <DependentUpon>tblChuongTrinhDaoTao.cs</DependentUpon>
@@ -649,8 +655,8 @@
     <EmbeddedResource Include="GUI\ucQLChuongTrinh.resx">
       <DependentUpon>ucQLChuongTrinh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\ucTrangThai.resx">
-      <DependentUpon>ucTrangThai.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\ucQLTrangThai.resx">
+      <DependentUpon>ucQLTrangThai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -663,6 +669,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Report\rpBangTotNghiep.rdlc" />
+    <EmbeddedResource Include="Report\rpCTCacMonHoc.rdlc" />
+    <EmbeddedResource Include="Report\rpDSSVCuaMotMonHoc.rdlc" />
+    <EmbeddedResource Include="Report\rpKQCacMonHocCuaSV.rdlc" />
+    <None Include="trainmanage.dbml.layout">
+      <DependentUpon>trainmanage.dbml</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -673,6 +687,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="trainmanage.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>trainmanage1.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="trainmanage.xsc">
       <DependentUpon>trainmanage.xsd</DependentUpon>
     </None>
@@ -685,7 +705,9 @@
       <DependentUpon>trainmanage.xsd</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="App_Code\Old\quanlydaotao.sql" />
     <Content Include="App_Code\scrTrainManageFull.sql" />
@@ -694,21 +716,12 @@
     <Content Include="App_Code\tbl_trainmanage.sql" />
     <Content Include="App_Code\tbvalues_trainmanage.sql" />
     <Content Include="App_Code\Old\trainmanage.sql" />
-    <Content Include="Icon\logo_ctu_3sw_1.ico" />
-    <Content Include="Icon\logo_ctu_3sw_10.ico" />
-    <Content Include="Icon\logo_ctu_3sw_11.ico" />
     <Content Include="Icon\logo_ctu_3sw_12.ico" />
-    <Content Include="Icon\logo_ctu_3sw_2.ico" />
-    <Content Include="Icon\logo_ctu_3sw_3.ico" />
-    <Content Include="Icon\logo_ctu_3sw_4.ico" />
-    <Content Include="Icon\logo_ctu_3sw_5.ico" />
-    <Content Include="Icon\logo_ctu_3sw_6.ico" />
-    <Content Include="Icon\logo_ctu_3sw_7.ico" />
-    <Content Include="Icon\logo_ctu_3sw_8.ico" />
     <Content Include="Icon\logo_ctu_3sw_9.ico" />
     <Content Include="Images\bg4.jpg" />
     <Content Include="Images\bg4.png" />
     <Content Include="Images\logo_ctu.png" />
+    <None Include="Resources\lock.png" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

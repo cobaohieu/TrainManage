@@ -44,6 +44,31 @@ namespace TrainingManagement.DAL
             }
             return dt;
         }
+        public DataTable getViewThongTin()
+        {
+            string sql = "sp_tblThongTin_View";
+            try
+            {
+                con = ds.getConnect();
+                da = new SqlDataAdapter(sql, con);
+                con.Open();
+                cmd = new SqlCommand();
+                cmd.CommandText = sql;
+                cmd.Connection = con;
+                dt = new DataTable();
+                da.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                da.Dispose();
+                con.Close();
+            }
+            return dt;
+        }
         public DataTable getIDThongTin(int id)
         {
             string sql = "sp_tblThongTin_SelectID";

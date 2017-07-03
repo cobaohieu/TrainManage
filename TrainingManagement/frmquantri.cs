@@ -31,7 +31,9 @@ namespace TrainingManagement
             if (PreClosingConfirmation() == System.Windows.Forms.DialogResult.Yes)
             {
                 Dispose(true);
-                this.Close();
+                frmLogin _frmGiaoVien = new frmLogin();
+                this.Hide();
+                _frmGiaoVien.Show();
             }
             else
             {
@@ -47,7 +49,9 @@ namespace TrainingManagement
                 if (PreClosingConfirmation() == System.Windows.Forms.DialogResult.Yes)
                 {
                     Dispose(true);
-                    Close();
+                    frmLogin _frmGiaoVien = new frmLogin();
+                    this.Hide();
+                    _frmGiaoVien.Show();
                 }
                 return true;
             }
@@ -59,14 +63,17 @@ namespace TrainingManagement
             if (PreClosingConfirmation() == System.Windows.Forms.DialogResult.Yes)
             {
                 Dispose(true);
-                this.Close();
+                frmLogin _frmGiaoVien = new frmLogin();
+                this.Hide();
+                _frmGiaoVien.Show();
             }
         }
 
         private void mônHọcToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             clearControlPanel();
-            GUI.tblTaiKhoan uc = new GUI.tblTaiKhoan();
+            //GUI.tblTaiKhoan uc = new GUI.tblTaiKhoan();
+            GUI.ucQLNguoiDung uc = new GUI.ucQLNguoiDung();
             uc.Dock = DockStyle.Fill;
             pnQuanTri.Controls.Add(uc); 
         }
@@ -78,7 +85,10 @@ namespace TrainingManagement
 
         private void thôngTinCáNhânToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            clearControlPanel();
+            GUI.ucTTCaNhan uc = new GUI.ucTTCaNhan();
+            uc.Dock = DockStyle.Fill;
+            pnQuanTri.Controls.Add(uc); 
         }
 
         private void giáoViênToolStripMenuItem_Click(object sender, EventArgs e)

@@ -19,6 +19,11 @@ namespace TrainingManagement.BLL
         {
             return dal.getAllSinhVien();
         }
+        public DataTable getViewSinhVien()
+        {
+            return dal.getViewSinhVien();
+        }
+
         public DataTable getIDSinhVien(int id)
         {
             return dal.getIDSinhVien(id);

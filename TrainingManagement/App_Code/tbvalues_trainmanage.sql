@@ -135,16 +135,16 @@ insert into tblKetQua values('9','7','9.2','3','8','1.8',N'Khá','')
 --13
 SET Identity_Insert tblTaiKhoan OFF
 DBCC CHECKIDENT (tblTaiKhoan, RESEED, 0);
-insert into tblTaiKhoan values('qt',N'12345678',N'Quản trị viên')
-insert into tblTaiKhoan values('ql',N'12345678',N'Quản lý chương trình đào tạo viên')
-insert into tblTaiKhoan values('gv1',N'12345678',N'Giáo viên')
-insert into tblTaiKhoan values('gv2',N'12345678',N'Giáo viên')
-insert into tblTaiKhoan values('gv3',N'12345678',N'Giáo viên')
-insert into tblTaiKhoan values('gv4',N'12345678',N'Giáo viên')
-insert into tblTaiKhoan values('gv5',N'12345678',N'Giáo viên')
-insert into tblTaiKhoan values('gv6',N'12345678',N'Giáo viên')
-insert into tblTaiKhoan values('gv7',N'12345678',N'Giáo viên')
-insert into tblTaiKhoan values('gv8',N'12345678',N'Giáo viên')
+insert into tblTaiKhoan values('qt',N'12345678',N'Admin')
+insert into tblTaiKhoan values('ql',N'12345678',N'Manager')
+insert into tblTaiKhoan values('gv1',N'12345678',N'Teacher')
+insert into tblTaiKhoan values('gv2',N'12345678',N'Teacher')
+insert into tblTaiKhoan values('gv3',N'12345678',N'Teacher')
+insert into tblTaiKhoan values('gv4',N'12345678',N'Teacher')
+insert into tblTaiKhoan values('gv5',N'12345678',N'Teacher')
+insert into tblTaiKhoan values('gv6',N'12345678',N'Teacher')
+insert into tblTaiKhoan values('gv7',N'12345678',N'Teacher')
+insert into tblTaiKhoan values('gv8',N'12345678',N'Teacher')
 --14
 SET Identity_Insert tblThongTin OFF
 DBCC CHECKIDENT (tblThongTin, RESEED, 0);

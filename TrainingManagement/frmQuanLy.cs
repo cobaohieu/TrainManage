@@ -5,7 +5,9 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using TrainingManagement.GUI;
 
 namespace TrainingManagement
 {
@@ -28,7 +30,9 @@ namespace TrainingManagement
             if (PreClosingConfirmation() == System.Windows.Forms.DialogResult.Yes)
             {
                 Dispose(true);
-                this.Close();
+                frmLogin _frmGiaoVien = new frmLogin();
+                this.Hide();
+                _frmGiaoVien.Show();
             }
             else
             {
@@ -44,7 +48,9 @@ namespace TrainingManagement
                 if (PreClosingConfirmation() == System.Windows.Forms.DialogResult.Yes)
                 {
                     Dispose(true);
-                    Close();
+                    frmLogin _frmGiaoVien = new frmLogin();
+                    this.Hide();
+                    _frmGiaoVien.Show();
                 }
                 return true;
             }
@@ -57,6 +63,10 @@ namespace TrainingManagement
 
         private void thôngTinCáNhânToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            clearControlPanel();
+            GUI.ucTTCaNhan uc = new GUI.ucTTCaNhan();
+            uc.Dock = DockStyle.Fill;
+            pnQuanLy.Controls.Add(uc); 
 
         }
 
@@ -70,10 +80,17 @@ namespace TrainingManagement
 
         }
 
+        private void clearControlPanel()
+        {
+            this.pnQuanLy.Controls.Clear();
+        }
 
         private void trạngTháiCủaSinhViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            clearControlPanel();
+            GUI.ucQLTrangThai uc = new GUI.ucQLTrangThai();
+            uc.Dock = DockStyle.Fill;
+            pnQuanLy.Controls.Add(uc); 
         }
 
         private void danhSáchCácChươngTrìnhĐàoTạoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -106,8 +123,18 @@ namespace TrainingManagement
             if (PreClosingConfirmation() == System.Windows.Forms.DialogResult.Yes)
             {
                 Dispose(true);
-                this.Close();
+                frmLogin _frmGiaoVien = new frmLogin();
+                this.Hide();
+                _frmGiaoVien.Show();
             }
+        }
+
+        private void frmQuanLy_Load(object sender, EventArgs e)
+        {
+            GUI.ucMain uc = new GUI.ucMain();
+            uc.Dock = DockStyle.Fill;
+            pnQuanLy.Controls.Add(uc); 
+
         }
     }
 }

@@ -39,5 +39,9 @@ namespace TrainingManagement.BLL
         {
             return dal.checkTaiKhoan(tentaikhoan, matkhau);
         }
+        public DataTable checkGroupTaiKhoan(string tentaikhoan, string matkhau)
+        {
+            return dal.checkGroupTaiKhoan(tentaikhoan, matkhau);
+        }
     }
 }

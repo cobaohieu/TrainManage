@@ -5,7 +5,9 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using TrainingManagement.GUI;
 
 namespace TrainingManagement
 {
@@ -29,7 +31,9 @@ namespace TrainingManagement
             if (PreClosingConfirmation() == System.Windows.Forms.DialogResult.Yes)
             {
                 Dispose(true);
-                this.Close();
+                frmLogin _frmGiaoVien = new frmLogin();
+                this.Hide();
+                _frmGiaoVien.Show();
             }
             else
             {
@@ -45,7 +49,9 @@ namespace TrainingManagement
                 if (PreClosingConfirmation() == System.Windows.Forms.DialogResult.Yes)
                 {
                     Dispose(true);
-                    this.Close();
+                    frmLogin _frmGiaoVien = new frmLogin();
+                    this.Hide();
+                    _frmGiaoVien.Show();
                 }
                 return true;
             }
@@ -57,13 +63,18 @@ namespace TrainingManagement
             if (PreClosingConfirmation() == System.Windows.Forms.DialogResult.Yes)
             {
                 Dispose(true);
-                this.Close();
+                frmLogin _frmGiaoVien = new frmLogin();
+                this.Hide();
+                _frmGiaoVien.Show();
             }
         }
 
         private void thôngTinCáNhânToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            clearControlPanel();
+            GUI.ucTTCaNhan uc = new GUI.ucTTCaNhan();
+            uc.Dock = DockStyle.Fill;
+            pnGiaoVien.Controls.Add(uc); 
         }
 
         private void mônHọcToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -103,7 +114,14 @@ namespace TrainingManagement
 
         private void frmGiaoVien_Load(object sender, EventArgs e)
         {
+            GUI.ucMain uc = new GUI.ucMain();
+            uc.Dock = DockStyle.Fill;
+            pnGiaoVien.Controls.Add(uc); 
 
+        }
+        private void clearControlPanel()
+        {
+            this.pnGiaoVien.Controls.Clear();
         }
     }
 }

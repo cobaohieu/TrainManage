@@ -59,5 +59,26 @@ namespace TrainingManagement.Entities
             get { return _diachi; }
             set { _diachi = value; }
         }
+        string _tentaikhoan;
+
+        public string Tentaikhoan
+        {
+            get { return _tentaikhoan; }
+            set { _tentaikhoan = value; }
+        }
+        string _matkhau;
+
+        public string Matkhau
+        {
+            get { return _matkhau; }
+            set { _matkhau = value; }
+        }
+        string _nhom;
+
+        public string Nhom
+        {
+            get { return _nhom; }
+            set { _nhom = value; }
+        }
     }
 }

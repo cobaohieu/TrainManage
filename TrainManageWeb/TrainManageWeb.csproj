@@ -73,11 +73,6 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataContext\trainmanage.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>trainmanage.dbml</DependentUpon>
-    </Compile>
     <Compile Include="giaovien.aspx.cs">
       <DependentUpon>giaovien.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -184,11 +179,6 @@
     <Content Include="quanly.Master" />
     <Content Include="login.Master" />
     <Content Include="home.Master" />
-    <Content Include="DataContext\trainmanage.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>trainmanage.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -197,6 +187,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="DataContext\" />
     <Folder Include="giaovien\" />
     <Folder Include="quanly\" />
     <Folder Include="quantri\" />
@@ -204,11 +195,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="DataContext\trainmanage.dbml.layout">
-      <DependentUpon>trainmanage.dbml</DependentUpon>
-    </None>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

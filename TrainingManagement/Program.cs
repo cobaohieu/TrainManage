@@ -15,7 +15,10 @@ namespace TrainingManagement
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new frmLogin());
             Application.Run(new frmQuanTri());
+            //Application.Run(new frmQuanLy());
+            //Application.Run(new frmGiaoVien());
         }
     }
 }

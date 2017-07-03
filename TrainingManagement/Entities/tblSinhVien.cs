@@ -73,5 +73,19 @@ namespace TrainingManagement.Entities
             get { return _diachi; }
             set { _diachi = value; }
         }
+        string _matrangthai;
+
+        public string Matrangthai
+        {
+            get { return _matrangthai; }
+            set { _matrangthai = value; }
+        }
+        string _tentrangthai;
+
+        public string Tentrangthai
+        {
+            get { return _tentrangthai; }
+            set { _tentrangthai = value; }
+        }
     }
 }

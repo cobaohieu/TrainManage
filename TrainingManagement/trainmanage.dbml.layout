@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 20" name="trainmanage">
+  <DataContextMoniker Name="/trainmanageDataContext" />
+  <nestedChildShapes>
+    <classShape Id="fa65ca9b-dc11-47c6-8304-611cf086b7c1" absoluteBounds="0.75, 1.5, 2, 1.3862939453125003">
+      <DataClassMoniker Name="/trainmanageDataContext/tblChuongTrinhDaoTao" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3a862702-7b48-418b-9128-2231237e52c3" absoluteBounds="0.765, 1.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="acdab93d-e3bc-433e-a456-e1ce81ae6e89" absoluteBounds="0.75, 9.5, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/trainmanageDataContext/tblTrangThai" />
+      <nestedChildShapes>
+        <elementListCompartment Id="40e9a705-4885-4505-b0aa-544a0846ff3a" absoluteBounds="0.765, 9.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="17b02ed2-8ac9-470c-aa05-cd94c1dcac33" absoluteBounds="0.75, 4.375, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/trainmanageDataContext/tblHocKy" />
+      <nestedChildShapes>
+        <elementListCompartment Id="07dc543b-f007-4c7d-983d-a7641581c1b7" absoluteBounds="0.765, 4.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="24902fe8-eb86-4714-83cb-52d22cc02a4e" absoluteBounds="6.25, 1, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/trainmanageDataContext/tblKetQua" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b8950ba0-51e8-4f4b-a5b1-04130b4b0f6a" absoluteBounds="6.265, 1.46, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1336391a-a3f1-4838-a558-afb9b7395fe8" absoluteBounds="1.5, 15.625, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/trainmanageDataContext/tblKhoa" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7f77a73c-afbe-488e-bce6-9101d9544cb4" absoluteBounds="1.5150000000000001, 16.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0dfaebb7-3211-4abe-be7f-dc6766d60594" absoluteBounds="0.75, 12.75, 2, 1.9631982421874987">
+      <DataClassMoniker Name="/trainmanageDataContext/tblLop" />
+      <nestedChildShapes>
+        <elementListCompartment Id="31648a6f-d198-4183-9d16-3c95f66089b8" absoluteBounds="0.765, 13.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f7212a72-7ab1-4c30-b5f1-cd352ef725ac" absoluteBounds="3.5, 1.25, 2, 1.9631982421875003">
+      <DataClassMoniker Name="/trainmanageDataContext/tblMonHoc" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c1e72a23-8a1d-4cff-b759-be22e5f9d452" absoluteBounds="3.515, 1.71, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5eb63acc-f9d9-4cfe-a37e-80cd715656c1" absoluteBounds="1.5, 18, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/trainmanageDataContext/tblNienKhoa" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c5f3f8a6-95ee-4947-8bda-3fedbd8e1deb" absoluteBounds="1.5150000000000001, 18.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e6e4265d-54f7-4527-b330-81578ba4e79d" absoluteBounds="3.5, 11.375, 2, 2.5401025390624987">
+      <DataClassMoniker Name="/trainmanageDataContext/tblSinhVien" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2a033661-7230-4391-ab6a-4d1f2dc2f3b4" absoluteBounds="3.515, 11.835, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4c0806f9-43c3-42b8-9d3e-e1915499bdfe" absoluteBounds="3.75, 5.25, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/trainmanageDataContext/tblTaiKhoan" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4b71b9c8-455a-48b8-9502-742b4a3de0ef" absoluteBounds="3.765, 5.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="601e976b-9837-4d2b-8682-8ccd810d1fb3" absoluteBounds="6.5, 4.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/trainmanageDataContext/tblThongTin" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a8f5508b-d8ec-46c8-a4bd-9d09dc8d1774" absoluteBounds="6.515, 5.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="21a0a9d1-888f-4106-a123-69751c814de2" absoluteBounds="0.75, 6.5, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/trainmanageDataContext/tblTinChi" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3a3692f8-fefa-44db-adac-e653db4a18ea" absoluteBounds="0.765, 6.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.125 : 15.625); (2.125 : 14.7131982421875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/trainmanageDataContext/tblKhoa/tblKhoa_tblLop" />
+      <nodes>
+        <classShapeMoniker Id="1336391a-a3f1-4838-a558-afb9b7395fe8" />
+        <classShapeMoniker Id="0dfaebb7-3211-4abe-be7f-dc6766d60594" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 2.23159912109375); (6.25 : 2.23159912109375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/trainmanageDataContext/tblMonHoc/tblMonHoc_tblKetQua" />
+      <nodes>
+        <classShapeMoniker Id="f7212a72-7ab1-4c30-b5f1-cd352ef725ac" />
+        <classShapeMoniker Id="24902fe8-eb86-4714-83cb-52d22cc02a4e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 2.19314697265625); (3.5 : 2.19314697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/trainmanageDataContext/tblChuongTrinhDaoTao/tblChuongTrinhDaoTao_tblMonHoc" />
+      <nodes>
+        <classShapeMoniker Id="fa65ca9b-dc11-47c6-8304-611cf086b7c1" />
+        <classShapeMoniker Id="f7212a72-7ab1-4c30-b5f1-cd352ef725ac" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.78125); (3.59375 : 4.78125); (3.59375 : 3.2131982421875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/trainmanageDataContext/tblHocKy/tblHocKy_tblMonHoc" />
+      <nodes>
+        <classShapeMoniker Id="17b02ed2-8ac9-470c-aa05-cd94c1dcac33" />
+        <classShapeMoniker Id="f7212a72-7ab1-4c30-b5f1-cd352ef725ac" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.5 : 18.8854484049479); (1.1249995 : 18.8854484049479); (1.1249995 : 14.7131982421875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/trainmanageDataContext/tblNienKhoa/tblNienKhoa_tblLop" />
+      <nodes>
+        <classShapeMoniker Id="5eb63acc-f9d9-4cfe-a37e-80cd715656c1" />
+        <classShapeMoniker Id="0dfaebb7-3211-4abe-be7f-dc6766d60594" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 12.6450512695312); (6.34375 : 12.6450512695312); (6.34375 : 3.5401025390625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/trainmanageDataContext/tblSinhVien/tblSinhVien_tblKetQua" />
+      <nodes>
+        <classShapeMoniker Id="e6e4265d-54f7-4527-b330-81578ba4e79d" />
+        <classShapeMoniker Id="24902fe8-eb86-4714-83cb-52d22cc02a4e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 13.3325512695312); (3.5 : 13.3325512695312)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/trainmanageDataContext/tblLop/tblLop_tblSinhVien" />
+      <nodes>
+        <classShapeMoniker Id="0dfaebb7-3211-4abe-be7f-dc6766d60594" />
+        <classShapeMoniker Id="e6e4265d-54f7-4527-b330-81578ba4e79d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 10.1931469726562); (4.5 : 10.1931469726562); (4.5 : 11.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/trainmanageDataContext/tblTrangThai/tblTrangThai_tblSinhVien" />
+      <nodes>
+        <classShapeMoniker Id="acdab93d-e3bc-433e-a456-e1ce81ae6e89" />
+        <classShapeMoniker Id="e6e4265d-54f7-4527-b330-81578ba4e79d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 6.03929768880208); (6.5 : 6.03929768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/trainmanageDataContext/tblTaiKhoan/tblTaiKhoan_tblThongTin" />
+      <nodes>
+        <classShapeMoniker Id="4c0806f9-43c3-42b8-9d3e-e1915499bdfe" />
+        <classShapeMoniker Id="601e976b-9837-4d2b-8682-8ccd810d1fb3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 7.38869466145833); (3.5624975 : 7.38869466145833); (3.5624975 : 3.2131982421875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/trainmanageDataContext/tblTinChi/tblTinChi_tblMonHoc" />
+      <nodes>
+        <classShapeMoniker Id="21a0a9d1-888f-4106-a123-69751c814de2" />
+        <classShapeMoniker Id="f7212a72-7ab1-4c30-b5f1-cd352ef725ac" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
