@@ -42,6 +42,8 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblHello = new System.Windows.Forms.Label();
+            this.lblId = new System.Windows.Forms.Label();
             this.gpLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -130,7 +132,8 @@
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox2.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.textBox2, "textBox2");
             this.textBox2.ForeColor = System.Drawing.SystemColors.Window;
             this.textBox2.Name = "textBox2";
@@ -145,26 +148,41 @@
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.textBox1, "textBox1");
             this.textBox1.ForeColor = System.Drawing.Color.White;
             this.textBox1.Name = "textBox1";
+            // 
+            // lblHello
+            // 
+            resources.ApplyResources(this.lblHello, "lblHello");
+            this.lblHello.ForeColor = System.Drawing.SystemColors.Window;
+            this.lblHello.Name = "lblHello";
+            // 
+            // lblId
+            // 
+            resources.ApplyResources(this.lblId, "lblId");
+            this.lblId.ForeColor = System.Drawing.SystemColors.Window;
+            this.lblId.Name = "lblId";
             // 
             // frmLogin
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.CancelButton = this.btnExit;
+            this.Controls.Add(this.lblId);
+            this.Controls.Add(this.lblHello);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.gpLogin);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.KeyPreview = true;
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmLogin";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Load += new System.EventHandler(this.frmMain_Load);
@@ -192,5 +210,7 @@
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lblHello;
+        private System.Windows.Forms.Label lblId;
     }
 }

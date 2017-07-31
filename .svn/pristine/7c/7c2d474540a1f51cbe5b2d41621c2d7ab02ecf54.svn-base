@@ -1,0 +1,53 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace TrainingManagement.Entities
+{
+    class tblBantin
+    {
+        int _id;
+
+        public int Id
+        {
+            get { return _id; }
+            set { _id = value; }
+        }
+        string _tieude;
+
+        public string Tieude
+        {
+            get { return _tieude; }
+            set { _tieude = value; }
+        }
+        string _tomtat;
+
+        public string Tomtat
+        {
+            get { return _tomtat; }
+            set { _tomtat = value; }
+        }
+        byte _hinh;
+
+        public byte Hinh
+        {
+            get { return _hinh; }
+            set { _hinh = value; }
+        }
+        DateTime _ngay;
+
+        public DateTime Ngay
+        {
+            get { return _ngay; }
+            set { _ngay = value; }
+        }
+        string _noidung;
+
+        public string Noidung
+        {
+            get { return _noidung; }
+            set { _noidung = value; }
+        }
+    }
+}

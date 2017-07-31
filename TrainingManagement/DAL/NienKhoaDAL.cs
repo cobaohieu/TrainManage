@@ -35,6 +35,7 @@ namespace TrainingManagement.DAL
             }
             catch (Exception ex)
             {
+                ex.ToString();
 
             }
             finally
@@ -64,6 +65,7 @@ namespace TrainingManagement.DAL
             }
             catch (Exception ex)
             {
+                ex.ToString();
 
             }
             finally
@@ -94,6 +96,7 @@ namespace TrainingManagement.DAL
             }
             catch (Exception ex)
             {
+                ex.ToString();
 
             }
             finally
@@ -125,6 +128,7 @@ namespace TrainingManagement.DAL
             }
             catch (Exception ex)
             {
+                ex.ToString();
 
             }
             finally
@@ -150,6 +154,7 @@ namespace TrainingManagement.DAL
             }
             catch (Exception ex)
             {
+                ex.ToString();
 
             }
             finally

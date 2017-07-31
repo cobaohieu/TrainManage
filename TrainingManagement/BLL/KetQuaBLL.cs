@@ -19,6 +19,10 @@ namespace TrainingManagement.BLL
         {
             return dal.getAllKetQua();
         }
+        public DataTable getViewKetQuaMonHocSV()
+        {
+            return dal.getViewKetQuaMonHocSV();
+        }
         public DataTable getIDKetQua(int id)
         {
             return dal.getIDKetQua(id);

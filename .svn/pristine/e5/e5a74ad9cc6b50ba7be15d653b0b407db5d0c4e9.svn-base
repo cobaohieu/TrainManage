@@ -1,0 +1,26 @@
+﻿<?xml version="1.0"?>
+
+<!--
+  For more information on how to configure your ASP.NET application, please visit
+  http://go.microsoft.com/fwlink/?LinkId=169433
+  -->
+
+<configuration>
+   <connectionStrings>
+      <add name="trainmanageConnectionString" 
+           connectionString="Server=KHDT-HIEU;Integrated Security=SSPI;Database=trainmanage;;user id=sa;password=123456789"
+         providerName="System.Data.SqlClient" />
+   </connectionStrings>
+   <system.webServer>
+      <directoryBrowse enabled="true" showFlags="Date,Time,Extension,Size" />
+   </system.webServer>
+    <system.web>
+      <compilation debug="true" targetFramework="4.0" />
+    </system.web>
+  <!--<sessionState
+            mode="SQLServer"
+            sqlConnectionString="data source=127.0.0.1; Integrated Security=SSPI; Initial Catalog=trainmanage;user id=sa;password=123456789"
+            cookieless="false"
+            timeout="20"
+    />-->
+</configuration>

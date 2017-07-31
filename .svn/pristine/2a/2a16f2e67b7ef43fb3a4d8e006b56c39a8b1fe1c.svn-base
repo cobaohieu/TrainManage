@@ -1,0 +1,172 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Data.SqlClient;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using TrainingManagement.GUI;
+
+
+namespace TrainingManagement.GUI
+{
+    public partial class ucQLNguoiDung : UserControl
+    {
+        BLL.ThongTinBLL bllThongTin;
+        BLL.TaiKhoanBLL bllTaiKhoan;
+        public ucQLNguoiDung()
+        {
+            InitializeComponent();
+            bllThongTin = new BLL.ThongTinBLL();
+            bllTaiKhoan = new BLL.TaiKhoanBLL();
+        }
+
+        private void ucQLNguoiDung_Load(object sender, EventArgs e)
+        {
+            ReLoad();
+        }
+        public void ReLoad()
+        {
+            DataTable dt = new DataTable();
+            dt = bllThongTin.getViewThongTin();
+            //dgvQLNguoiDung.DataSource = dt;
+            //cbNhom.Text = dt.Rows[0][4].ToString().Trim();
+            //cbNhom.Text = dt.Rows[0][4].ToString().Trim();
+            //cbNhom.Text = dt.Rows[0][4].ToString().Trim();
+            cbNhom.ValueMember = cbNhom.Text = dt.Rows[0][4].ToString().Trim();
+        }
+
+        public void FillData(string id)
+        {
+            DataTable dt = new DataTable();
+            dt = bllTaiKhoan.getIDTaiKhoan(Int32.Parse(id));
+            if (dt.Rows.Count > 0)
+            {
+                txtTenTaiKhoan.Text = dt.Rows[0]["TenTaiKhoan"].ToString();
+                txtMatKhau.Text = dt.Rows[0]["MatKhau"].ToString();
+                cbNhom.Text = dt.Rows[0]["Nhom"].ToString();
+                txtHoTen.Text = dt.Rows[0]["HoTen"].ToString();
+                txtChucVu.Text = dt.Rows[0]["ChucVu"].ToString();
+                dtpNamSinh.Text = dt.Rows[0]["NamSinh"].ToString();
+                txtGioiTinh.Text = dt.Rows[0]["GioiTinh"].ToString();
+                txtDiaChi.Text = dt.Rows[0]["DiaChi"].ToString();
+            }
+        }
+        string flag = "";
+        string _ID = "";
+        public bool CheckObject()
+        {
+            if (string.IsNullOrEmpty(txtTenTaiKhoan.Text))
+            {
+                MessageBox.Show("Bạn chua nhập thông tin mã lớp", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtTenTaiKhoan.Focus();
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtTenTaiKhoan.Text))
+            {
+
+                MessageBox.Show("Bạn chua nhập thông tin tên lớp", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtTenTaiKhoan.Focus();
+                return false;
+            }
+            return true;
+        }
+        
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            GUI.ucMain uc = new GUI.ucMain();
+            uc.Dock = DockStyle.Fill;
+        }
+
+        public void ClearText()
+        {
+            txtTenTaiKhoan.Clear();
+            txtMatKhau.Clear();
+            txtHoTen.Clear();
+            txtChucVu.Clear();
+            dtpNamSinh.ResetText();
+            txtGioiTinh.Clear();
+            txtDiaChi.Clear();
+        }
+        public void LockObject()
+        {
+
+        }
+        public void UnLockObject()
+        {
+
+        }
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            flag = "add";
+            UnLockObject();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            flag = "edit";
+        }
+
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+            flag = "delete";
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (CheckObject())
+            {
+                Entities.tblTaiKhoan tk = new Entities.tblTaiKhoan();
+                if (string.IsNullOrEmpty(_ID))
+                {
+                    tk.Id = Int32.Parse(_ID);
+                }
+                tk.Tentaikhoan = txtTenTaiKhoan.Text;
+                tk.Matkhau = txtMatKhau.Text;
+                tk.Nhom = dtpNamSinh.Text;
+                tk.Hoten = txtHoTen.Text;
+                tk.Chucvu = txtChucVu.Text;
+                tk.Gioitinh = txtGioiTinh.Text;
+                tk.Diachi = txtDiaChi.Text;
+                if (flag == "add")
+                {
+                    bool check = bllTaiKhoan.insertTaiKhoan(tk);
+                    if (check)
+                    {
+                        MessageBox.Show("Thêm thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                else if (flag == "edit")
+                {
+                    bool check = bllTaiKhoan.updateTaiKhoan(tk);
+                    if (check)
+                    {
+                        MessageBox.Show("Sửa thành công.", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                else if (flag == "delete")
+                {
+                    bool check = bllTaiKhoan.deleteTaiKhoan(tk);
+                    if (check)
+                    {
+                        MessageBox.Show("Xóa thành công.", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Đã xảy ra lỗi trong quá trình thực hiên.", "Cảnh báo!", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                }
+                ReLoad();
+            }
+
+        }
+
+        private void cbNhom_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
+}

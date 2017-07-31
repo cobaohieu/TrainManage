@@ -1,0 +1,145 @@
+﻿namespace TrainingManagement.GUI
+{
+    partial class ucChiTietCacMonHoc
+    {
+        /// <summary> 
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary> 
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Component Designer generated code
+
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.rpvCTCacMonHoc = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            //this.trainmanage = new TrainingManagement.trainmanage();
+            //this.tblMonHocBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            //this.tblMonHocTableAdapter = new TrainingManagement.trainmanageTableAdapters.tblMonHocTableAdapter();
+            //((System.ComponentModel.ISupportInitialize)(this.trainmanage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblMonHocBindingSource)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // btnClose
+            // 
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.Location = new System.Drawing.Point(761, 520);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(86, 30);
+            this.btnClose.TabIndex = 171;
+            this.btnClose.Text = "Đóng";
+            this.btnClose.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(9, 49);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(87, 17);
+            this.label2.TabIndex = 163;
+            this.label2.Text = "Tên môn học:";
+            // 
+            // label1
+            // 
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(853, 37);
+            this.label1.TabIndex = 157;
+            this.label1.Text = "BÁO CÁO CHI TIẾT CÁC MÔN HỌC";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // rpvCTCacMonHoc
+            // 
+            this.rpvCTCacMonHoc.Location = new System.Drawing.Point(7, 80);
+            this.rpvCTCacMonHoc.Name = "rpvCTCacMonHoc";
+            this.rpvCTCacMonHoc.Size = new System.Drawing.Size(840, 434);
+            this.rpvCTCacMonHoc.TabIndex = 173;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tblMonHocBindingSource, "mamonhoc", true));
+            this.comboBox1.DataSource = this.tblMonHocBindingSource;
+            this.comboBox1.DisplayMember = "mamonhoc";
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(101, 45);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(746, 25);
+            this.comboBox1.TabIndex = 174;
+            this.comboBox1.ValueMember = "mamonhoc";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // trainmanage
+            // 
+            //this.trainmanage.DataSetName = "trainmanage";
+            //this.trainmanage.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tblMonHocBindingSource
+            // 
+            this.tblMonHocBindingSource.DataMember = "tblMonHoc";
+            //this.tblMonHocBindingSource.DataSource = this.trainmanage;
+            // 
+            // tblMonHocTableAdapter
+            // 
+            //this.tblMonHocTableAdapter.ClearBeforeFill = true;
+            // 
+            // ucChiTietCacMonHoc
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.rpvCTCacMonHoc);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Name = "ucChiTietCacMonHoc";
+            this.Size = new System.Drawing.Size(853, 553);
+            //((System.ComponentModel.ISupportInitialize)(this.trainmanage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblMonHocBindingSource)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private Microsoft.Reporting.WinForms.ReportViewer rpvCTCacMonHoc;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.BindingSource tblMonHocBindingSource;
+        //private trainmanage trainmanage;
+        //private trainmanageTableAdapters.tblMonHocTableAdapter tblMonHocTableAdapter;
+    }
+}

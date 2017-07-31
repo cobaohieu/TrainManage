@@ -20,13 +20,12 @@ sodienthoai varchar(11)
 )
 go
 --2
-/*create table tblChucVu(
+create table tblChucVu(
 id int primary key identity(1,1) not null,
 machucvu varchar(50) unique,
 tenchucvu nvarchar(100)
 )
 go
-*/
 --3
 create table tblNienKhoa(
 id int primary key identity(1,1) not null,
@@ -58,89 +57,104 @@ tentrangthai nvarchar(100)
 )
 go
 --7
-create table tblChuongTrinhDaoTao(
+create table tblChuongTrinh(
 id int primary key identity(1,1) not null,
+idtrangthai int not null foreign key references tblTrangThai(id),
 machuongtrinh varchar(50) unique,
 tenchuongtrinh nvarchar(100)
 )
 go
 --8
-create table tblTaiKhoan(
-id int primary key identity(1,1) not null, 
-tentaikhoan nvarchar(100) unique, 
-matkhau nvarchar(100), 
-nhom nvarchar(100)
-)
---8.1
-create table tblThongTin(
+create table tblNhom(
 id int primary key identity(1,1) not null,
-idtaiKhoan int not null foreign key references tblTaiKhoan(id) on update cascade on delete cascade,
-hoten nvarchar(100),
-chucvu nvarchar(100),
-namsinh date default getdate(),
-gioitinh nvarchar(3),
-diachi nvarchar(100),
+manhom nvarchar(50) unique,
+tennhom nvarchar(100)
 )
-go
 --9
 create table tblLop(
 id int primary key identity(1,1) not null,
-idkhoa int not null foreign key references tblKhoa(id) on update cascade on delete cascade,
-idnienkhoa int not null foreign key references tblNienKhoa(id) on update cascade on delete cascade,
-malop varchar(50) unique,
+idkhoa int not null foreign key references tblKhoa(id),
+idnienkhoa int not null foreign key references tblNienKhoa(id),
+malop nvarchar(50) unique,
 tenlop nvarchar(100),
-siso int
+siso varchar(50)
 )
 go
 --10
 create table tblMonHoc(
 id int primary key identity(1,1) not null,
-idchuongtrinh int foreign key references tblChuongTrinhDaoTao(id) on update cascade on delete cascade,
-idhocky int foreign key references tblHocKy(id) on update cascade on delete cascade,
-idtinchi int foreign key references tblTinChi(id) on update cascade on delete cascade, 
-mamonhoc varchar(50) unique,
+idchuongtrinh int not null  foreign key references tblChuongTrinh(id),
+idhocky int not null  foreign key references tblHocKy(id),
+idtinchi int not null  foreign key references tblTinChi(id), 
+mamonhoc nvarchar(50) unique,
 tenmonhoc nvarchar(100)
 )
 go
 --11
-/*
-create table tblGiaoVien(
+create table tblTaiKhoan(
 id int primary key identity(1,1) not null,
-idchucvu int not null foreign key references tblChucVu(id) on update cascade on delete cascade,
-idkhoa int not null foreign key references tblKhoa(id) on update cascade on delete cascade,
-idmonhoc int not null foreign key references tblMonHoc(id) on update cascade on delete cascade,
-magiaovien varchar(50) unique,
-tengiaovien nvarchar(100),
+idnhom int not null foreign key references tblNhom(id),
+tentaikhoan nvarchar(100) not null, 
+matkhau nvarchar(100),
+hoten nvarchar(100),
 namsinh date default getdate(),
 gioitinh nvarchar(3),
-noisinh nvarchar(100),
-diachi nvarchar(100)
+diachi nvarchar(100),
+email nvarchar(100),
+dienthoai nvarchar(12)
 )
-go
-*/
 --12
+create table tblQuanTri(
+id int primary key identity(1,1) not null,
+idnhom int not null foreign key references tblNhom(id),
+idtaikhoan int not null foreign key references tblTaiKhoan(id)
+)
+--13
 create table tblSinhVien(
 id int primary key identity(1,1) not null,
-idlop int not null foreign key references tblLop(id) on update cascade on delete cascade,
-idtrangthai int not null foreign key references tblTrangThai(id) on update cascade on delete cascade,
-masinhvien varchar(50) unique,
-tensinhvien nvarchar(100),
-namsinh date default getdate(),
-gioitinh nvarchar(3),
-noisinh nvarchar(100),
-diachi nvarchar(100)
+idlop int not null foreign key references tblLop(id),
+idtaikhoan int not null foreign key references tblTaiKhoan(id),
+idtrangthai int not null foreign key references tblTrangThai(id)
 )
 go
---13
+--14
+create table tblGiaoVien(
+id int primary key identity(1,1) not null,
+idchucvu int not null foreign key references tblChucVu(id),
+idlop int not null foreign key references tblLop(id),
+idkhoa int not null foreign key references tblKhoa(id),
+idmonhoc int not null foreign key references tblMonHoc(id),
+idtaikhoan int not null foreign key references tblTaiKhoan(id)
+)
+go
+--15
 create table tblKetQua(
 id int primary key identity(1,1) not null,
-idsinhvien int not null foreign key references tblSinhVien(id) on update cascade on delete cascade,
-idmonhoc int not null foreign key references tblMonhoc(id) on update cascade on delete cascade,
+idsinhvien int not null foreign key references tblSinhVien(id),
+idmonhoc int not null foreign key references tblMonhoc(id),
 diemtrungbinh float,
 diemthilan1 float,
 diemthilan2 float,
 diemtongket float,
 hanhkiem nvarchar(100),
-ghichu nvarchar(100),
+ghichu nvarchar(100)
 )
 go
+--16
+create table tblDangNhap(
+id int primary key identity(1,1) not null,
+idtaikhoan int not null foreign key references tblTaiKhoan(id),
+diachiip nvarchar(50),
+ngaydangnhapcuoi datetime,
+Session nvarchar(10)
+)
+--17
+create table tblBanTin(
+id int primary key identity(1,1) not null,
+tieude nvarchar(100),
+noidung text,
+ngay datetime,
+hinh image
+)
+--
+--

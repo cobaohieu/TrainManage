@@ -35,6 +35,7 @@ namespace TrainingManagement.DAL
             }
             catch (Exception ex)
             {
+                ex.ToString();
 
             }
             finally
@@ -64,6 +65,7 @@ namespace TrainingManagement.DAL
             }
             catch (Exception ex)
             {
+                ex.ToString();
 
             }
             finally
@@ -93,6 +95,37 @@ namespace TrainingManagement.DAL
             }
             catch (Exception ex)
             {
+                ex.ToString();
+
+            }
+            finally
+            {
+                da.Dispose();
+                con.Close();
+            }
+            return dt;
+        }
+        public DataTable findDSSVCuaMonHoc(string tenmonhoc)
+        {
+            string sql = "sp_tblTaiKhoan_FindDSSVCuaMonHoc";
+            try
+            {
+                con = ds.getConnect();
+                cmd = new SqlCommand();
+                da = new SqlDataAdapter(sql, con);
+                con.Open();
+                cmd.CommandText = sql;
+                cmd.Connection = con;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@tenmonhoc", SqlDbType.NVarChar).Value = tenmonhoc;
+                da = new SqlDataAdapter();
+                da.SelectCommand = cmd;
+                dt = new DataTable();
+                da.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
 
             }
             finally
@@ -124,6 +157,7 @@ namespace TrainingManagement.DAL
             }
             catch (Exception ex)
             {
+                ex.ToString();
 
             }
             finally
@@ -157,6 +191,7 @@ namespace TrainingManagement.DAL
             }
             catch (Exception ex)
             {
+                ex.ToString();
 
             }
             finally
@@ -182,6 +217,7 @@ namespace TrainingManagement.DAL
             }
             catch (Exception ex)
             {
+                ex.ToString();
 
             }
             finally

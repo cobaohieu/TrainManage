@@ -23,6 +23,10 @@ namespace TrainingManagement.BLL
         {
             return dal.getViewMonHoc(mamonhoc);
         }
+        public DataTable findDSSVCuaMonHoc(string tenmonhoc)
+        {
+            return dal.findDSSVCuaMonHoc(tenmonhoc);
+        }
         public DataTable getIDMonHoc(int id)
         {
             return dal.getIDMonHoc(id);

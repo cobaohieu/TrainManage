@@ -19,6 +19,10 @@ namespace TrainingManagement.BLL
         {
             return dal.getAllTrangThai();
         }
+        public DataTable getViewTrangThai()
+        {
+            return dal.getViewTrangThai();
+        }
         public DataTable getIDTrangThai(int id)
         {
             return dal.getIDTrangThai(id);

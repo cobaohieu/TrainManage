@@ -1,0 +1,34 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="TrainManageWeb._default" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="description" content="Niên luận về quản lý hệ thống luận văn" />
+    <meta name="author" content="Nhom 5" />
+    <meta name="keyword" content="nien luan, luan van" />
+    <link href="Styles/style.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li style="float:right"><a class="active" href="login.aspx">Đăng nhập</a></li>
+            <li style="float:right"><a class="active" href="login.aspx">Đăng ký</a></li>
+            <asp:PlaceHolder ID="PlaceHolder1" runat="server"></asp:PlaceHolder>
+            
+        </ul>
+    </header>
+    <div class="bodyPan">
+
+    </div>
+        
+    <footer>
+         
+    </footer>
+</body>
+</html>
+

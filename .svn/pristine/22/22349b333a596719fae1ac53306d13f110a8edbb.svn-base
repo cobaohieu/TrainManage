@@ -1,0 +1,61 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Data.SqlClient;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using TrainingManagement.GUI;
+
+namespace TrainingManagement.GUI
+{
+    public partial class ucDoiMatKhau : UserControl
+    {
+        BLL.TaiKhoanBLL bllTaiKhoan;
+        public ucDoiMatKhau()
+        {
+            InitializeComponent();
+            bllTaiKhoan = new BLL.TaiKhoanBLL();
+        }
+
+        public void bool CheckObject()
+        {
+            string matkhaucu = txtMatKhauCu.Text;
+            string matkhaumoi = txtMatKhauMoi.Text;
+            string matkhaumoi_ = TxtMatKhauMoi_.Text;
+            if(string.IsNullOrWhiteSpace(matkhaucu))
+            {
+                MessageBox.Show("Vui lòng nhập vào Mật khẩu cũ!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtMatKhauCu.Focus();
+                return false;
+            }
+            if(string.IsNullOrWhiteSpace(matkhaumoi)){
+                MessageBox.Show("Vui lòng nhập vào Mật khẩu mới!","Cảnh báo",MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            if(string.IsNullOrWhiteSpace(matkhaumoi_)){
+                MessageBox.Show("Vui lòng nhập vào Nhập vào mật khẩu mới!","Cảnh báo",MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
+
+        }
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+            if (CheckObject())
+            {
+                Entities.tblTaiKhoan tk = new Entities.tblTaiKhoan();
+
+            }
+        }
+
+        private void ucDoiMatKhau_Load(object sender, EventArgs e)
+        {
+            txtMatKhauCu.Focus();
+        }
+    }
+}

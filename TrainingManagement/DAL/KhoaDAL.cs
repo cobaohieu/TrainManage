@@ -35,6 +35,7 @@ namespace TrainingManagement.DAL
             }
             catch (Exception ex)
             {
+                ex.ToString();
 
             }
             finally
@@ -64,6 +65,7 @@ namespace TrainingManagement.DAL
             }
             catch (Exception ex)
             {
+                ex.ToString();
 
             }
             finally
@@ -87,12 +89,13 @@ namespace TrainingManagement.DAL
                 cmd.Connection = con;
                 cmd.Parameters.Add("@makhoa", SqlDbType.NVarChar).Value = kh.Makhoa;
                 cmd.Parameters.Add("@tenkhoa", SqlDbType.NVarChar).Value = kh.Tenkhoa;
-                cmd.Parameters.Add("@sodienthoai", SqlDbType.Int).Value = kh.Sodienthoai;
+                cmd.Parameters.Add("@sodienthoai", SqlDbType.NVarChar).Value = kh.Sodienthoai;
                 cmd.ExecuteNonQuery();
                 check = true;
             }
             catch (Exception ex)
             {
+                ex.ToString();
 
             }
             finally
@@ -117,13 +120,13 @@ namespace TrainingManagement.DAL
                 cmd.Parameters.Add("@id", SqlDbType.Int).Value = kh.Id;
                 cmd.Parameters.Add("@makhoa", SqlDbType.NVarChar).Value = kh.Makhoa;
                 cmd.Parameters.Add("@tenkhoa", SqlDbType.NVarChar).Value = kh.Tenkhoa;
-                cmd.Parameters.Add("@sodienthoai", SqlDbType.Int).Value = kh.Sodienthoai;
+                cmd.Parameters.Add("@sodienthoai", SqlDbType.NVarChar).Value = kh.Sodienthoai;
                 cmd.ExecuteNonQuery();
                 check = true;
             }
             catch (Exception ex)
             {
-
+                ex.ToString();
             }
             finally
             {
@@ -142,12 +145,15 @@ namespace TrainingManagement.DAL
                 cmd = new SqlCommand(sql, con);
                 con.Open();
                 cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = sql;
+                cmd.Connection = con;
                 cmd.Parameters.Add("@id", SqlDbType.Int).Value = kh.Id;
                 cmd.ExecuteNonQuery();
                 check = true;
             }
             catch (Exception ex)
             {
+                ex.ToString();
 
             }
             finally

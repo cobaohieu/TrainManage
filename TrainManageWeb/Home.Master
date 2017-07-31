@@ -9,10 +9,7 @@
 	<meta name="description" content="Niên luận về quản lý hệ thống luận văn" />
 	<meta name="author" content="Co Hieu va Mai Nguyen" />
 	<meta name="keyword" content="nien luan, luan van" />
-	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link href="Styles/style.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -20,21 +17,30 @@
     <form id="form1" runat="server">
     <div>
         <asp:ContentPlaceHolder ID="main" runat="server">
-            <div id="top">
-               <div id="menubar">
-                  <a href="#home">Trang chủ</a>
-                  <a href="#news">Tin tức</a>
-                  <a href="#contact">Liên hệ</a>
-                  <a href="#about">Giới thiệu</a>
-                  <a href="#register">Đăng ký</a>
-               </div>
-               <div id="center">
-
-               </div>
-               <div id="bottom">
-
-               </div>
+        <div class="container">
+            <div class="header">
+                <ul>
+                    <li><a href="home.aspx">Trang chủ</a></li>
+                    <li><a href="about.aspx">Giới thiệu</a></li>
+                    <li><a href="contact.aspx">Liên hệ</a></li>
+                    <li style="float:right"><a class="active" href="login.aspx">Đăng nhập</a></li>
+                    <li style="float:right"><a class="active" href="register.aspx">Đăng ký</a></li>
+                </ul>
             </div>
+            <div class="body">
+
+            </div>
+            <div class="footer">
+               <%-- <p>
+                    Trường Đại học Cần Thơ (Can Tho University)
+                    <br />
+                    Khu II, đường 3/2, P. Xuân Khánh, Q. Ninh Kiều, TP. Cần Thơ.
+                
+                    <br />
+                    Điện thoại: (84-292) 3832663 - (84-292) 3838474; <br />Fax: (84-292) 3838474; <br />Email: dhct@ctu.edu.vn.
+                </p>--%>
+            </div>
+        </div>
         </asp:ContentPlaceHolder>
     </div>
     </form>

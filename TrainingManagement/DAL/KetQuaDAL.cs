@@ -35,6 +35,7 @@ namespace TrainingManagement.DAL
             }
             catch (Exception ex)
             {
+                ex.ToString();
 
             }
             finally
@@ -64,6 +65,7 @@ namespace TrainingManagement.DAL
             }
             catch (Exception ex)
             {
+                ex.ToString();
 
             }
             finally
@@ -98,6 +100,7 @@ namespace TrainingManagement.DAL
             }
             catch (Exception ex)
             {
+                ex.ToString();
 
             }
             finally
@@ -133,6 +136,7 @@ namespace TrainingManagement.DAL
             }
             catch (Exception ex)
             {
+                ex.ToString();
 
             }
             finally
@@ -158,6 +162,7 @@ namespace TrainingManagement.DAL
             }
             catch (Exception ex)
             {
+                ex.ToString();
 
             }
             finally
@@ -166,6 +171,32 @@ namespace TrainingManagement.DAL
                 con.Close();
             }
             return check;
+        }
+        public DataTable getViewKetQuaMonHocSV()
+        {
+            string sql = "sp_tblKetQua_MonHocSinhVien";
+            try
+            {
+                con = ds.getConnect();
+                da = new SqlDataAdapter(sql, con);
+                con.Open();
+                cmd = new SqlCommand();
+                cmd.CommandText = sql;
+                cmd.Connection = con;
+                dt = new DataTable();
+                da.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+
+            }
+            finally
+            {
+                da.Dispose();
+                con.Close();
+            }
+            return dt;
         }
     }
 }

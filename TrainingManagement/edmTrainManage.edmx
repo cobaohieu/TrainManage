@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="trainmanageModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <Function Name="sp_tblChuongTrinh_FindDanhSachMonHocName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="tenchuongtrinh" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_tblKetQua_BangtotNghiepSinhVien" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_tblKetQua_MonHocSinhVien" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="trainmanageModelStoreContainer" />
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="trainmanageModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="trainmanageEntities" annotation:LazyLoadingEnabled="true" >
+          <FunctionImport Name="sp_tblChuongTrinh_FindDanhSachMonHocName" ReturnType="Collection(trainmanageModel.sp_tblChuongTrinh_FindDanhSachMonHocName_Result)">
+            <Parameter Name="tenchuongtrinh" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_tblKetQua_BangtotNghiepSinhVien" ReturnType="Collection(trainmanageModel.sp_tblKetQua_BangtotNghiepSinhVien_Result)" />
+          <FunctionImport Name="sp_tblKetQua_MonHocSinhVien" ReturnType="Collection(trainmanageModel.sp_tblKetQua_MonHocSinhVien_Result)" />
+        </EntityContainer>
+        <ComplexType Name="sp_tblChuongTrinh_FindDanhSachMonHocName_Result">
+          <Property Type="String" Name="machuongtrinh" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="tenchuongtrinh" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="tenmonhoc" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="sotinchi" Nullable="true" MaxLength="2" />
+        </ComplexType>
+        <ComplexType Name="sp_tblKetQua_BangtotNghiepSinhVien_Result">
+          <Property Type="String" Name="tentaikhoan" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="hoten" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="tenlop" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="tennienkhoa" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="nambatdau" Nullable="true" />
+          <Property Type="DateTime" Name="namketthuc" Nullable="true" />
+          <Property Type="String" Name="tenhocky" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="tenmonhoc" Nullable="true" MaxLength="100" />
+          <Property Type="Double" Name="diemthilan1" Nullable="true" />
+          <Property Type="Double" Name="diemthilan2" Nullable="true" />
+          <Property Type="Double" Name="diemtrungbinh" Nullable="true" />
+          <Property Type="Double" Name="diemtongket" Nullable="true" />
+          <Property Type="String" Name="hanhkiem" Nullable="true" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="sp_tblKetQua_MonHocSinhVien_Result">
+          <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="String" Name="tentaikhoan" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="hoten" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="tenlop" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="tenkhoa" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="tenmonhoc" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="tenchuongtrinh" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="tenhocky" Nullable="true" MaxLength="100" />
+          <Property Type="Double" Name="diemthilan1" Nullable="true" />
+          <Property Type="Double" Name="diemthilan2" Nullable="true" />
+          <Property Type="Double" Name="diemtrungbinh" Nullable="true" />
+          <Property Type="Int32" Name="idsinhvien" Nullable="false" />
+          <Property Type="Int32" Name="idlop" Nullable="false" />
+          <Property Type="String" Name="malop" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="siso" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ghichu" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="hanhkiem" Nullable="true" MaxLength="100" />
+          <Property Type="Int32" Name="idketqua" Nullable="false" />
+          <Property Type="Int32" Name="idmonhoc" Nullable="false" />
+          <Property Type="String" Name="mamonhoc" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="idtinchi" Nullable="false" />
+          <Property Type="Int32" Name="idchuongtrinh" Nullable="false" />
+          <Property Type="Int32" Name="idtrangthai" Nullable="false" />
+          <Property Type="String" Name="machuongtrinh" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="idkhoa" Nullable="false" />
+          <Property Type="String" Name="makhoa" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="sodienthoai" Nullable="true" MaxLength="11" />
+          <Property Type="Int32" Name="idhocky" Nullable="false" />
+          <Property Type="String" Name="mahocky" Nullable="true" MaxLength="50" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="trainmanageModelStoreContainer" CdmEntityContainer="trainmanageEntities" >
+          <FunctionImportMapping FunctionImportName="sp_tblChuongTrinh_FindDanhSachMonHocName" FunctionName="trainmanageModel.Store.sp_tblChuongTrinh_FindDanhSachMonHocName">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="trainmanageModel.sp_tblChuongTrinh_FindDanhSachMonHocName_Result">
+                <ScalarProperty Name="machuongtrinh" ColumnName="machuongtrinh" />
+                <ScalarProperty Name="tenchuongtrinh" ColumnName="tenchuongtrinh" />
+                <ScalarProperty Name="tenmonhoc" ColumnName="tenmonhoc" />
+                <ScalarProperty Name="sotinchi" ColumnName="sotinchi" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_tblKetQua_BangtotNghiepSinhVien" FunctionName="trainmanageModel.Store.sp_tblKetQua_BangtotNghiepSinhVien">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="trainmanageModel.sp_tblKetQua_BangtotNghiepSinhVien_Result">
+                <ScalarProperty Name="tentaikhoan" ColumnName="tentaikhoan" />
+                <ScalarProperty Name="hoten" ColumnName="hoten" />
+                <ScalarProperty Name="tenlop" ColumnName="tenlop" />
+                <ScalarProperty Name="tennienkhoa" ColumnName="tennienkhoa" />
+                <ScalarProperty Name="nambatdau" ColumnName="nambatdau" />
+                <ScalarProperty Name="namketthuc" ColumnName="namketthuc" />
+                <ScalarProperty Name="tenhocky" ColumnName="tenhocky" />
+                <ScalarProperty Name="tenmonhoc" ColumnName="tenmonhoc" />
+                <ScalarProperty Name="diemthilan1" ColumnName="diemthilan1" />
+                <ScalarProperty Name="diemthilan2" ColumnName="diemthilan2" />
+                <ScalarProperty Name="diemtrungbinh" ColumnName="diemtrungbinh" />
+                <ScalarProperty Name="diemtongket" ColumnName="diemtongket" />
+                <ScalarProperty Name="hanhkiem" ColumnName="hanhkiem" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_tblKetQua_MonHocSinhVien" FunctionName="trainmanageModel.Store.sp_tblKetQua_MonHocSinhVien">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="trainmanageModel.sp_tblKetQua_MonHocSinhVien_Result">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="tentaikhoan" ColumnName="tentaikhoan" />
+                <ScalarProperty Name="hoten" ColumnName="hoten" />
+                <ScalarProperty Name="tenlop" ColumnName="tenlop" />
+                <ScalarProperty Name="tenkhoa" ColumnName="tenkhoa" />
+                <ScalarProperty Name="tenmonhoc" ColumnName="tenmonhoc" />
+                <ScalarProperty Name="tenchuongtrinh" ColumnName="tenchuongtrinh" />
+                <ScalarProperty Name="tenhocky" ColumnName="tenhocky" />
+                <ScalarProperty Name="diemthilan1" ColumnName="diemthilan1" />
+                <ScalarProperty Name="diemthilan2" ColumnName="diemthilan2" />
+                <ScalarProperty Name="diemtrungbinh" ColumnName="diemtrungbinh" />
+                <ScalarProperty Name="idsinhvien" ColumnName="idsinhvien" />
+                <ScalarProperty Name="idlop" ColumnName="idlop" />
+                <ScalarProperty Name="malop" ColumnName="malop" />
+                <ScalarProperty Name="siso" ColumnName="siso" />
+                <ScalarProperty Name="ghichu" ColumnName="ghichu" />
+                <ScalarProperty Name="hanhkiem" ColumnName="hanhkiem" />
+                <ScalarProperty Name="idketqua" ColumnName="idketqua" />
+                <ScalarProperty Name="idmonhoc" ColumnName="idmonhoc" />
+                <ScalarProperty Name="mamonhoc" ColumnName="mamonhoc" />
+                <ScalarProperty Name="idtinchi" ColumnName="idtinchi" />
+                <ScalarProperty Name="idchuongtrinh" ColumnName="idchuongtrinh" />
+                <ScalarProperty Name="idtrangthai" ColumnName="idtrangthai" />
+                <ScalarProperty Name="machuongtrinh" ColumnName="machuongtrinh" />
+                <ScalarProperty Name="idkhoa" ColumnName="idkhoa" />
+                <ScalarProperty Name="makhoa" ColumnName="makhoa" />
+                <ScalarProperty Name="sodienthoai" ColumnName="sodienthoai" />
+                <ScalarProperty Name="idhocky" ColumnName="idhocky" />
+                <ScalarProperty Name="mahocky" ColumnName="mahocky" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

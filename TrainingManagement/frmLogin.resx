@@ -155,7 +155,7 @@ CHƯƠNG TRÌNH ĐÀO TẠO</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <metadata name="pictureBox2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -202,6 +202,9 @@ CHƯƠNG TRÌNH ĐÀO TẠO</value>
   <data name="cbxShowPassword.Location" type="System.Drawing.Point, System.Drawing">
     <value>225, 101</value>
   </data>
+  <data name="cbxShowPassword.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
   <data name="cbxShowPassword.Size" type="System.Drawing.Size, System.Drawing">
     <value>125, 20</value>
   </data>
@@ -235,11 +238,14 @@ CHƯƠNG TRÌNH ĐÀO TẠO</value>
   <data name="btnLogin.Location" type="System.Drawing.Point, System.Drawing">
     <value>226, 134</value>
   </data>
+  <data name="btnLogin.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
   <data name="btnLogin.Size" type="System.Drawing.Size, System.Drawing">
     <value>86, 30</value>
   </data>
   <data name="btnLogin.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="btnLogin.Text" xml:space="preserve">
     <value>Đăng nhập</value>
@@ -268,6 +274,9 @@ CHƯƠNG TRÌNH ĐÀO TẠO</value>
   <data name="btnExit.Location" type="System.Drawing.Point, System.Drawing">
     <value>331, 134</value>
   </data>
+  <data name="btnExit.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
   <data name="btnExit.Size" type="System.Drawing.Size, System.Drawing">
     <value>86, 30</value>
   </data>
@@ -295,6 +304,9 @@ CHƯƠNG TRÌNH ĐÀO TẠO</value>
   <data name="txtPass.Location" type="System.Drawing.Point, System.Drawing">
     <value>225, 67</value>
   </data>
+  <data name="txtPass.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
   <data name="txtPass.Size" type="System.Drawing.Size, System.Drawing">
     <value>193, 22</value>
   </data>
@@ -318,6 +330,9 @@ CHƯƠNG TRÌNH ĐÀO TẠO</value>
   </data>
   <data name="txtUser.Location" type="System.Drawing.Point, System.Drawing">
     <value>226, 27</value>
+  </data>
+  <data name="txtUser.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
   </data>
   <data name="txtUser.Size" type="System.Drawing.Size, System.Drawing">
     <value>193, 22</value>
@@ -349,6 +364,9 @@ CHƯƠNG TRÌNH ĐÀO TẠO</value>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
     <value>155, 70</value>
   </data>
+  <data name="label3.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 16</value>
   </data>
@@ -356,7 +374,7 @@ CHƯƠNG TRÌNH ĐÀO TẠO</value>
     <value>0</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
-    <value>Mật khẩu:</value>
+    <value>:Mật khẩu</value>
   </data>
   <data name="&gt;&gt;label3.Name" xml:space="preserve">
     <value>label3</value>
@@ -382,6 +400,9 @@ CHƯƠNG TRÌNH ĐÀO TẠO</value>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
     <value>120, 28</value>
   </data>
+  <data name="label2.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>102, 16</value>
   </data>
@@ -389,7 +410,7 @@ CHƯƠNG TRÌNH ĐÀO TẠO</value>
     <value>0</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>Tên đăng nhập:</value>
+    <value>:Tên đăng nhập</value>
   </data>
   <data name="&gt;&gt;label2.Name" xml:space="preserve">
     <value>label2</value>
@@ -408,6 +429,9 @@ CHƯƠNG TRÌNH ĐÀO TẠO</value>
   </data>
   <data name="gpLogin.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 260</value>
+  </data>
+  <data name="gpLogin.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
   </data>
   <data name="gpLogin.Size" type="System.Drawing.Size, System.Drawing">
     <value>425, 174</value>
@@ -428,7 +452,7 @@ CHƯƠNG TRÌNH ĐÀO TẠO</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;gpLogin.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <metadata name="textBox2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -468,7 +492,7 @@ KHOA CÔNG NGHỆ THÔNG TIN VÀ TRUYỀN THÔNG</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;textBox2.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -495,7 +519,7 @@ KHOA CÔNG NGHỆ THÔNG TIN VÀ TRUYỀN THÔNG</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <metadata name="textBox1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -536,7 +560,64 @@ Nhóm 5 © 2017</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lblHello.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblHello.Location" type="System.Drawing.Point, System.Drawing">
+    <value>348, 158</value>
+  </data>
+  <data name="lblHello.Size" type="System.Drawing.Size, System.Drawing">
+    <value>10, 13</value>
+  </data>
+  <data name="lblHello.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblHello.Text" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="&gt;&gt;lblHello.Name" xml:space="preserve">
+    <value>lblHello</value>
+  </data>
+  <data name="&gt;&gt;lblHello.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblHello.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblHello.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="lblId.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblId.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblId.Location" type="System.Drawing.Point, System.Drawing">
+    <value>374, 136</value>
+  </data>
+  <data name="lblId.Size" type="System.Drawing.Size, System.Drawing">
+    <value>10, 13</value>
+  </data>
+  <data name="lblId.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblId.Text" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="&gt;&gt;lblId.Name" xml:space="preserve">
+    <value>lblId</value>
+  </data>
+  <data name="&gt;&gt;lblId.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblId.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblId.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -2327,9 +2408,6 @@ Nhóm 5 © 2017</value>
         7WcbBZ4cBJrN0Gcz/Eb0b6CB+w+z1QRm2wB0s93GzPjC9OsN42+ggfsfs9mu/4LrM3/mK418NoNvOIEG
         Grh/8GXMP195/f8DaZe0frq+00wAAAAASUVORK5CYII=
 </value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

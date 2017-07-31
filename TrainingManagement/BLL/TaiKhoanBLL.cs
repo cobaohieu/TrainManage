@@ -15,6 +15,14 @@ namespace TrainingManagement.BLL
         {
             dal = new DAL.TaiKhoanDAL();
         }
+        public DataTable getAllGetSV()
+        {
+            return dal.getKQTaiKhoan();
+        }
+        public DataTable getKQTaiKhoan()
+        {
+            return dal.getKQTaiKhoan();
+        }
         public DataTable getAllTaiKhoan()
         {
             return dal.getAllTaiKhoan();
@@ -22,6 +30,19 @@ namespace TrainingManagement.BLL
         public DataTable getIDTaiKhoan(int id)
         {
             return dal.getIDTaiKhoan(id);
+        }
+        public DataTable viewKetQuaTaiKhoan()
+        {
+            return dal.viewKetQuaTaiKhoan();
+        }
+        public DataTable findKetQuaTaiKhoan(string hoten)
+        {
+            return dal.findKetQuaTaiKhoan(hoten);
+        }
+        
+        public DataTable getBangTotNghiep(string hoten)
+        {
+            return dal.getBangTotNghiep(hoten);
         }
         public bool insertTaiKhoan(Entities.tblTaiKhoan tk)
         {

@@ -1,0 +1,68 @@
+﻿
+--
+if object_id('sp_tblTrangThai_ViewSinhVien')is not null
+	drop proc sp_tblTrangThai_ViewSinhVien
+go
+create procedure sp_tblTrangThai_ViewSinhVien
+as
+begin
+	select a.id as N'STT',a.masinhvien as N'Mã sinh viên', a.tensinhvien as N'Tên sinh viên', c.tenlop as N'Tên lớp', b.tentrangthai as N'Tên trạng thái'
+	from tblSinhVien a
+		inner join tblTrangThai b on a.idtrangthai = b.id
+		inner join tblLop c on a.idlop = c.id
+	order by a.id
+end
+go
+
+
+--
+
+--
+if object_id('sp_tblLop_View')is not null
+	drop proc sp_tblLop_View
+go
+create procedure sp_tblLop_View
+as
+begin
+	select a.malop, a.tenlop, a.siso, b.tenkhoa, c.tennienkhoa
+	from tblLop as a
+		inner join tblKhoa b on a.idkhoa = b.id
+		inner join tblNienKhoa c on a.idnienkhoa = c.id
+end
+go
+--
+if object_id('sp_tblLop_ViewYear')is not null
+	drop proc sp_tblLop_ViewYear
+go
+create procedure sp_tblLop_ViewYear
+as
+begin
+	select a.malop, a.tenlop, a.siso, b.tenkhoa, c.tennienkhoa, c.nambatdau, c.namketthuc
+	from tblLop as a
+		inner join tblKhoa b on a.idkhoa = b.id
+		inner join tblNienKhoa c on a.idnienkhoa = c.id
+end
+go
+--
+
+
+
+
+--
+if object_id('sp_tblMonHoc_View')is not null
+	drop proc sp_tblMonHoc_view
+go
+create procedure sp_tblMonHoc_View
+@keyword varchar(10)
+as
+begin
+	set @keyword = Ltrim(Rtrim(@keyword))
+	select a.mamonhoc as N'Mã môn học', a.tenmonhoc as N'Tên môn học', b.tenchuongtrinh as N'Tên chương trình', c.tenhocky as N'Tên học kỳ', d.sotinchi as N'Số tín chỉ'
+	from tblMonHoc a
+		inner join tblChuongTrinh b on a.idchuongtrinh = b.id
+		inner join tblHocKy c on a.idhocky = c.id
+		inner join tblTinChi d on a.idtinchi = d.id
+	where a.mamonhoc like '%' + @keyword + '%'
+	order by a.id
+end
+go

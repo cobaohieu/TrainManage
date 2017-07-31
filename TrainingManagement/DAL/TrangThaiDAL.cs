@@ -35,6 +35,33 @@ namespace TrainingManagement.DAL
             }
             catch (Exception ex)
             {
+                ex.ToString();
+
+            }
+            finally
+            {
+                da.Dispose();
+                con.Close();
+            }
+            return dt;
+        }
+        public DataTable getViewTrangThai()
+        {
+            string sql = "sp_tblTrangThai_ViewSinhVien";
+            try
+            {
+                con = ds.getConnect();
+                da = new SqlDataAdapter(sql, con);
+                con.Open();
+                cmd = new SqlCommand();
+                cmd.CommandText = sql;
+                cmd.Connection = con;
+                dt = new DataTable();
+                da.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
 
             }
             finally
@@ -64,6 +91,7 @@ namespace TrainingManagement.DAL
             }
             catch (Exception ex)
             {
+                ex.ToString();
 
             }
             finally
@@ -92,6 +120,7 @@ namespace TrainingManagement.DAL
             }
             catch (Exception ex)
             {
+                ex.ToString();
 
             }
             finally
@@ -121,6 +150,7 @@ namespace TrainingManagement.DAL
             }
             catch (Exception ex)
             {
+                ex.ToString();
 
             }
             finally
@@ -146,6 +176,7 @@ namespace TrainingManagement.DAL
             }
             catch (Exception ex)
             {
+                ex.ToString();
 
             }
             finally

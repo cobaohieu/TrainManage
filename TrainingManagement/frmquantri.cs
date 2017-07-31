@@ -14,9 +14,11 @@ namespace TrainingManagement
 
     public partial class frmQuanTri : Form
     {
-        public frmQuanTri()
+        public frmQuanTri(string user, string id)
         {
             InitializeComponent();
+            lblHello.Text = "Xin chào " + user;
+            lblId.Text = id;
         }
         private DialogResult PreClosingConfirmation()
         {
@@ -31,9 +33,9 @@ namespace TrainingManagement
             if (PreClosingConfirmation() == System.Windows.Forms.DialogResult.Yes)
             {
                 Dispose(true);
-                frmLogin _frmGiaoVien = new frmLogin();
-                this.Hide();
-                _frmGiaoVien.Show();
+                this.Close();
+                frmLogin _frmLogin = new frmLogin();
+                _frmLogin.Show();
             }
             else
             {
@@ -49,9 +51,9 @@ namespace TrainingManagement
                 if (PreClosingConfirmation() == System.Windows.Forms.DialogResult.Yes)
                 {
                     Dispose(true);
-                    frmLogin _frmGiaoVien = new frmLogin();
-                    this.Hide();
-                    _frmGiaoVien.Show();
+                    this.Close();
+                    frmLogin _frmLogin = new frmLogin();
+                    _frmLogin.Show();
                 }
                 return true;
             }
@@ -63,17 +65,16 @@ namespace TrainingManagement
             if (PreClosingConfirmation() == System.Windows.Forms.DialogResult.Yes)
             {
                 Dispose(true);
-                frmLogin _frmGiaoVien = new frmLogin();
-                this.Hide();
-                _frmGiaoVien.Show();
+                this.Close();
+                frmLogin _frmLogin = new frmLogin();
+                _frmLogin.Show();
             }
         }
 
         private void mônHọcToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             clearControlPanel();
-            //GUI.tblTaiKhoan uc = new GUI.tblTaiKhoan();
-            GUI.ucQLNguoiDung uc = new GUI.ucQLNguoiDung();
+            GUI.uctblTaiKhoan uc = new GUI.uctblTaiKhoan();
             uc.Dock = DockStyle.Fill;
             pnQuanTri.Controls.Add(uc); 
         }
@@ -86,38 +87,9 @@ namespace TrainingManagement
         private void thôngTinCáNhânToolStripMenuItem_Click(object sender, EventArgs e)
         {
             clearControlPanel();
-            GUI.ucTTCaNhan uc = new GUI.ucTTCaNhan();
+            GUI.ucTTCaNhan uc = new GUI.ucTTCaNhan(lblId.Text);
             uc.Dock = DockStyle.Fill;
             pnQuanTri.Controls.Add(uc); 
-        }
-
-        private void giáoViênToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void sinhViênToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void quảnLýChấtLượngToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void quảnTrịToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void lớpToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            clearControlPanel();
-            GUI.tblLop uc = new GUI.tblLop();
-            uc.Dock = DockStyle.Fill;
-            pnQuanTri.Controls.Add(uc);    
         }
 
         private void clearControlPanel()
@@ -128,7 +100,7 @@ namespace TrainingManagement
         private void khoaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             clearControlPanel();
-            GUI.tblKhoa uc = new GUI.tblKhoa();
+            GUI.uctblKhoa uc = new GUI.uctblKhoa();
             uc.Dock = DockStyle.Fill;
             pnQuanTri.Controls.Add(uc); 
         }
@@ -147,13 +119,14 @@ namespace TrainingManagement
         {
             GUI.ucMain uc = new GUI.ucMain();
             uc.Dock = DockStyle.Fill;
-            pnQuanTri.Controls.Add(uc); 
+            pnQuanTri.Controls.Add(uc);
+            tmTime.Start();
         }
 
         private void niênKhóaToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             clearControlPanel();
-            GUI.tblChuongTrinhDaoTao uc = new GUI.tblChuongTrinhDaoTao();
+            GUI.uctblChuongTrinh uc = new GUI.uctblChuongTrinh();
             uc.Dock = DockStyle.Fill;
             pnQuanTri.Controls.Add(uc); 
 
@@ -162,7 +135,7 @@ namespace TrainingManagement
         private void họcKỳToolStripMenuItem_Click(object sender, EventArgs e)
         {
             clearControlPanel();
-            GUI.tblHocKy uc = new GUI.tblHocKy();
+            GUI.uctblHocKy uc = new GUI.uctblHocKy();
             uc.Dock = DockStyle.Fill;
             pnQuanTri.Controls.Add(uc); 
         }
@@ -170,7 +143,7 @@ namespace TrainingManagement
         private void mônHọcToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             clearControlPanel();
-            GUI.tblMonHoc uc = new GUI.tblMonHoc();
+            GUI.uctblMonHoc uc = new GUI.uctblMonHoc();
             uc.Dock = DockStyle.Fill;
             pnQuanTri.Controls.Add(uc); 
         }
@@ -178,15 +151,7 @@ namespace TrainingManagement
         private void niênKhóaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             clearControlPanel();
-            GUI.tblNienKhoa uc = new GUI.tblNienKhoa();
-            uc.Dock = DockStyle.Fill;
-            pnQuanTri.Controls.Add(uc); 
-        }
-
-        private void sinhViênToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            clearControlPanel();
-            GUI.tblSinhVien uc = new GUI.tblSinhVien();
+            GUI.uctblNienKhoa uc = new GUI.uctblNienKhoa();
             uc.Dock = DockStyle.Fill;
             pnQuanTri.Controls.Add(uc); 
         }
@@ -194,9 +159,49 @@ namespace TrainingManagement
         private void tínChỉToolStripMenuItem_Click(object sender, EventArgs e)
         {
             clearControlPanel();
-            GUI.tblTinChi uc = new GUI.tblTinChi();
+            GUI.uctblTinChi uc = new GUI.uctblTinChi();
             uc.Dock = DockStyle.Fill;
             pnQuanTri.Controls.Add(uc); 
+        }
+
+        private void tmTime_Tick(object sender, EventArgs e)
+        {
+            lbltime.Text ="Bây giờ là: " + DateTime.Now.ToLongTimeString();
+        }
+
+        private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            clearControlPanel();
+            GUI.ucDoiMatKhau uc = new GUI.ucDoiMatKhau();
+            uc.Dock = DockStyle.Fill;
+            pnQuanTri.Controls.Add(uc);
+        }
+
+        private void chứcVụToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            clearControlPanel();
+            GUI.uctblChucVu uc = new GUI.uctblChucVu();
+            uc.Dock = DockStyle.Fill;
+            pnQuanTri.Controls.Add(uc);
+
+        }
+
+        private void nhómNgườiDùngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            clearControlPanel();
+            GUI.uctblNhom uc = new GUI.uctblNhom();
+            uc.Dock = DockStyle.Fill;
+            pnQuanTri.Controls.Add(uc);
+
+        }
+
+        private void trạngTháiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            clearControlPanel();
+            GUI.uctblTrangThai uc = new GUI.uctblTrangThai();
+            uc.Dock = DockStyle.Fill;
+            pnQuanTri.Controls.Add(uc);
+
         }
     }
 }

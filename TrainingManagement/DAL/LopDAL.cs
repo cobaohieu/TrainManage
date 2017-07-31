@@ -35,6 +35,7 @@ namespace TrainingManagement.DAL
             }
             catch (Exception ex)
             {
+                ex.ToString();
 
             }
             finally
@@ -64,6 +65,7 @@ namespace TrainingManagement.DAL
             }
             catch (Exception ex)
             {
+                ex.ToString();
 
             }
             finally
@@ -95,6 +97,7 @@ namespace TrainingManagement.DAL
             }
             catch (Exception ex)
             {
+                ex.ToString();
 
             }
             finally
@@ -127,6 +130,7 @@ namespace TrainingManagement.DAL
             }
             catch (Exception ex)
             {
+                ex.ToString();
 
             }
             finally
@@ -146,12 +150,15 @@ namespace TrainingManagement.DAL
                 cmd = new SqlCommand(sql, con);
                 con.Open();
                 cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = sql;
+                cmd.Connection = con;
                 cmd.Parameters.Add("@id", SqlDbType.Int).Value = lp.Id;
                 cmd.ExecuteNonQuery();
                 check = true;
             }
             catch (Exception ex)
             {
+                ex.ToString();
 
             }
             finally

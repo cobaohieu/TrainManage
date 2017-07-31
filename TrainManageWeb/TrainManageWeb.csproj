@@ -60,7 +60,17 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="about.aspx" />
+    <Content Include="contact.aspx" />
+    <Content Include="default.aspx" />
     <Content Include="giaovien.aspx" />
+    <Content Include="GUI\ucChangePassword.ascx" />
+    <Content Include="GUI\ucFindResultSubject.ascx" />
+    <Content Include="GUI\ucFindUserInfo.ascx" />
+    <Content Include="GUI\ucListModule.ascx" />
+    <Content Include="GUI\ucUpdateInfo.ascx" />
+    <Content Include="GUI\ucViewInfo.ascx" />
+    <Content Include="GUI\ucRegister.ascx" />
     <Content Include="home.aspx" />
     <Content Include="login.aspx" />
     <Content Include="quanly.aspx" />
@@ -73,12 +83,82 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="about.aspx.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="about.aspx.designer.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="contact.aspx.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contact.aspx.designer.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="giaovien.aspx.cs">
       <DependentUpon>giaovien.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="giaovien.aspx.designer.cs">
       <DependentUpon>giaovien.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ucChangePassword.ascx.cs">
+      <DependentUpon>ucChangePassword.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\ucChangePassword.ascx.designer.cs">
+      <DependentUpon>ucChangePassword.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ucFindResultSubject.ascx.cs">
+      <DependentUpon>ucFindResultSubject.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\ucFindResultSubject.ascx.designer.cs">
+      <DependentUpon>ucFindResultSubject.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ucFindUserInfo.ascx.cs">
+      <DependentUpon>ucFindUserInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\ucFindUserInfo.ascx.designer.cs">
+      <DependentUpon>ucFindUserInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ucListModule.ascx.cs">
+      <DependentUpon>ucListModule.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\ucListModule.ascx.designer.cs">
+      <DependentUpon>ucListModule.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ucUpdateInfo.ascx.cs">
+      <DependentUpon>ucUpdateInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\ucUpdateInfo.ascx.designer.cs">
+      <DependentUpon>ucUpdateInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ucViewInfo.ascx.cs">
+      <DependentUpon>ucViewInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\ucViewInfo.ascx.designer.cs">
+      <DependentUpon>ucViewInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ucRegister.ascx.cs">
+      <DependentUpon>ucRegister.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\ucRegister.ascx.designer.cs">
+      <DependentUpon>ucRegister.ascx</DependentUpon>
     </Compile>
     <Compile Include="home.aspx.cs">
       <DependentUpon>home.aspx</DependentUpon>
@@ -179,6 +259,7 @@
     <Content Include="quanly.Master" />
     <Content Include="login.Master" />
     <Content Include="home.Master" />
+    <Content Include="traimanage.sitemap" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -188,7 +269,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DataContext\" />
-    <Folder Include="giaovien\" />
     <Folder Include="quanly\" />
     <Folder Include="quantri\" />
     <Folder Include="sinhvien\" />

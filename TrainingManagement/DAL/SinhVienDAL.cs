@@ -35,6 +35,7 @@ namespace TrainingManagement.DAL
             }
             catch (Exception ex)
             {
+                ex.ToString();
 
             }
             finally
@@ -60,6 +61,7 @@ namespace TrainingManagement.DAL
             }
             catch (Exception ex)
             {
+                ex.ToString();
 
             }
             finally
@@ -89,6 +91,7 @@ namespace TrainingManagement.DAL
             }
             catch (Exception ex)
             {
+                ex.ToString();
 
             }
             finally
@@ -111,18 +114,14 @@ namespace TrainingManagement.DAL
                 cmd.CommandText = sql;
                 cmd.Connection = con;
                 cmd.Parameters.Add("@idlop", SqlDbType.Int).Value = sv.Idlop;
+                cmd.Parameters.Add("@idtaikhoan", SqlDbType.Int).Value = sv.Idtaikhoan;
                 cmd.Parameters.Add("@idtrangthai", SqlDbType.Int).Value = sv.Idtrangthai;
-                cmd.Parameters.Add("@masinhvien", SqlDbType.NVarChar).Value = sv.Masinhvien;
-                cmd.Parameters.Add("@tensinhvien", SqlDbType.NVarChar).Value = sv.Tensinhvien;
-                cmd.Parameters.Add("@namsinh", SqlDbType.Date).Value = sv.Namsinh;
-                cmd.Parameters.Add("@gioitinh", SqlDbType.NVarChar).Value = sv.Gioitinh;
-                cmd.Parameters.Add("@noisinh", SqlDbType.NVarChar).Value = sv.Noisinh;
-                cmd.Parameters.Add("@diachi", SqlDbType.NVarChar).Value = sv.Diachi;
                 cmd.ExecuteNonQuery();
                 check = true;
             }
             catch (Exception ex)
             {
+                ex.ToString();
 
             }
             finally
@@ -146,18 +145,14 @@ namespace TrainingManagement.DAL
                 cmd.Connection = con;
                 cmd.Parameters.Add("@id", SqlDbType.Int).Value = sv.Id;
                 cmd.Parameters.Add("@idlop", SqlDbType.Int).Value = sv.Idlop;
+                cmd.Parameters.Add("@idtaikhoan", SqlDbType.Int).Value = sv.Idtaikhoan;
                 cmd.Parameters.Add("@idtrangthai", SqlDbType.Int).Value = sv.Idtrangthai;
-                cmd.Parameters.Add("@masinhvien", SqlDbType.NVarChar).Value = sv.Masinhvien;
-                cmd.Parameters.Add("@tensinhvien", SqlDbType.NVarChar).Value = sv.Tensinhvien;
-                cmd.Parameters.Add("@namsinh", SqlDbType.Date).Value = sv.Namsinh;
-                cmd.Parameters.Add("@gioitinh", SqlDbType.NVarChar).Value = sv.Gioitinh;
-                cmd.Parameters.Add("@noisinh", SqlDbType.NVarChar).Value = sv.Noisinh;
-                cmd.Parameters.Add("@diachi", SqlDbType.NVarChar).Value = sv.Diachi;
                 cmd.ExecuteNonQuery();
                 check = true;
             }
             catch (Exception ex)
             {
+                ex.ToString();
 
             }
             finally
@@ -183,6 +178,7 @@ namespace TrainingManagement.DAL
             }
             catch (Exception ex)
             {
+                ex.ToString();
 
             }
             finally

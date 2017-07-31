@@ -31,12 +31,13 @@ namespace TrainingManagement.Entities
             get { return _tenkhoa; }
             set { _tenkhoa = value; }
         }
-        int _sodienthoai;
+        string _sodienthoai;
 
-        public int Sodienthoai
+        public string Sodienthoai
         {
             get { return _sodienthoai; }
             set { _sodienthoai = value; }
         }
+        
     }
 }
